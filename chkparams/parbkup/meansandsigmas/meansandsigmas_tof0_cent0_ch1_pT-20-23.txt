@@ -1,0 +1,18 @@
+PIONS  | idphi: 0.0166415	 mean err: 0.00211429	 width: 0.0631856	 width err: 0.000128328	 yield: 5887	 yield err: 76.7268
+KAONS  | idphi: 0.193954	 mean err: 0.00589512	 width: 0.0601144	 width err: 0.00382701	 yield: 7594	 yield err: 87.1436
+PROTONS| idphi: 0.885025	 mean err: 0.00408353	 width: 0.113891	 width err: 0.00493221	 yield: 3289	 yield err: 57.3498
+PIONS  | idphi: 0.0133998	 mean err: 0.00199706	 width: 0.0631856	 width err: 0.000139677	 yield: 5531	 yield err: 74.3707
+KAONS  | idphi: 0.198692	 mean err: 0.00597242	 width: 0.0618597	 width err: 0.00345861	 yield: 7439	 yield err: 86.2496
+PROTONS| idphi: 0.885598	 mean err: 0.00380163	 width: 0.109538	 width err: 0.00592261	 yield: 3202	 yield err: 56.5862
+PIONS  | idphi: 0.0150048	 mean err: 0.00201841	 width: 0.0631856	 width err: 0.000144075	 yield: 5652	 yield err: 75.1798
+KAONS  | idphi: 0.195008	 mean err: 0.00596909	 width: 0.0604843	 width err: 0.00365456	 yield: 7253	 yield err: 85.1645
+PROTONS| idphi: 0.882581	 mean err: 0.00366396	 width: 0.10879	 width err: 0.00750602	 yield: 3119	 yield err: 55.848
+PIONS  | idphi: 0.0127767	 mean err: 0.00214415	 width: 0.0631856	 width err: 0.000188299	 yield: 5349	 yield err: 73.1369
+KAONS  | idphi: 0.19406	 mean err: 0.00561373	 width: 0.0584592	 width err: 0.00314474	 yield: 7224	 yield err: 84.9941
+PROTONS| idphi: 0.883788	 mean err: 0.00410188	 width: 0.114451	 width err: 0.00447525	 yield: 3028	 yield err: 55.0273
+PIONS  | idphi: 0.0126947	 mean err: 0.00212613	 width: 0.0631856	 width err: 0.000143053	 yield: 5524	 yield err: 74.3236
+KAONS  | idphi: 0.195975	 mean err: 0.00598346	 width: 0.0596829	 width err: 0.00382038	 yield: 7447	 yield err: 86.296
+PROTONS| idphi: 0.883432	 mean err: 0.00401998	 width: 0.114413	 width err: 0.00457402	 yield: 3225	 yield err: 56.7891
+PIONS  | idphi: 0.0150211	 mean err: 0.00172694	 width: 0.0631856	 width err: 0.000141132	 yield: 5724	 yield err: 75.6571
+KAONS  | idphi: 0.195031	 mean err: 0.00583484	 width: 0.0572367	 width err: 0.00751515	 yield: 7427	 yield err: 86.18
+PROTONS| idphi: 0.886666	 mean err: 0.00380559	 width: 0.110132	 width err: 0.00659482	 yield: 3166	 yield err: 56.2672

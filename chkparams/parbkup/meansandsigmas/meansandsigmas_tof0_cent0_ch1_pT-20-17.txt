@@ -1,0 +1,18 @@
+PIONS  | idphi: 1	 mean err: 1	 width: 1	 width err: 1
+KAONS  | idphi: 1	 mean err: 1	 width: 1	 width err: 1
+PROTONS| idphi: 1	 mean err: 1	 width: 1	 width err: 1
+PIONS  | idphi: 1	 mean err: 1	 width: 1	 width err: 1
+KAONS  | idphi: 1	 mean err: 1	 width: 1	 width err: 1
+PROTONS| idphi: 1	 mean err: 1	 width: 1	 width err: 1
+PIONS  | idphi: 1	 mean err: 1	 width: 1	 width err: 1
+KAONS  | idphi: 1	 mean err: 1	 width: 1	 width err: 1
+PROTONS| idphi: 1	 mean err: 1	 width: 1	 width err: 1
+PIONS  | idphi: 1	 mean err: 1	 width: 1	 width err: 1
+KAONS  | idphi: 1	 mean err: 1	 width: 1	 width err: 1
+PROTONS| idphi: 1	 mean err: 1	 width: 1	 width err: 1
+PIONS  | idphi: 1	 mean err: 1	 width: 1	 width err: 1
+KAONS  | idphi: 1	 mean err: 1	 width: 1	 width err: 1
+PROTONS| idphi: 1	 mean err: 1	 width: 1	 width err: 1
+PIONS  | idphi: 1	 mean err: 1	 width: 1	 width err: 1
+KAONS  | idphi: 1	 mean err: 1	 width: 1	 width err: 1
+PROTONS| idphi: 1	 mean err: 1	 width: 1	 width err: 1

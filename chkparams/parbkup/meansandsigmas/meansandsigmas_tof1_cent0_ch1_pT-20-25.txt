@@ -1,0 +1,18 @@
+PIONS  | idphi: 0	 mean err: 7.87727e-005	 width: 0.0948227	 width err: 0.000118754	 yield: 10188	 yield err: 100.936
+KAONS  | idphi: 0.2	 mean err: 0.000197075	 width: 0.0327014	 width err: 0.0001086	 yield: 10342	 yield err: 101.696
+PROTONS| idphi: 0.884065	 mean err: 0.00595663	 width: 0.117926	 width err: 0.0118461	 yield: 4436	 yield err: 66.6033
+PIONS  | idphi: 0	 mean err: 8.73391e-005	 width: 0.0948227	 width err: 3.53022e-005	 yield: 9682	 yield err: 98.3972
+KAONS  | idphi: 0.2	 mean err: 0.000203507	 width: 0.0327014	 width err: 0.000111676	 yield: 9884	 yield err: 99.4183
+PROTONS| idphi: 0.869375	 mean err: 0.00533509	 width: 0.123822	 width err: 0.00838489	 yield: 4397	 yield err: 66.3099
+PIONS  | idphi: 0	 mean err: 7.52821e-005	 width: 0.0948227	 width err: 0.000104973	 yield: 9794	 yield err: 98.9646
+KAONS  | idphi: 0.2	 mean err: 0.000193398	 width: 0.0327014	 width err: 0.000108085	 yield: 9972	 yield err: 99.8599
+PROTONS| idphi: 0.867286	 mean err: 0.005817	 width: 0.123822	 width err: 0.00589697	 yield: 4328	 yield err: 65.7875
+PIONS  | idphi: 0	 mean err: 7.78729e-005	 width: 0.0948227	 width err: 0.000113876	 yield: 9558	 yield err: 97.765
+KAONS  | idphi: 0.2	 mean err: 0.000188336	 width: 0.0327014	 width err: 0.000104482	 yield: 9838	 yield err: 99.1867
+PROTONS| idphi: 0.860437	 mean err: 0.00598192	 width: 0.123822	 width err: 0.00843188	 yield: 4276	 yield err: 65.3911
+PIONS  | idphi: 0	 mean err: 8.25833e-005	 width: 0.0948227	 width err: 0.000118196	 yield: 9850	 yield err: 99.2472
+KAONS  | idphi: 0.2	 mean err: 0.000142572	 width: 0.0327014	 width err: 0.000107847	 yield: 10082	 yield err: 100.409
+PROTONS| idphi: 0.870053	 mean err: 0.00573555	 width: 0.123822	 width err: 0.0114797	 yield: 4449	 yield err: 66.7008
+PIONS  | idphi: 0	 mean err: 8.04444e-005	 width: 0.0948227	 width err: 0.000134711	 yield: 10074	 yield err: 100.369
+KAONS  | idphi: 0.2	 mean err: 0.000187844	 width: 0.0327014	 width err: 0.000103665	 yield: 10299	 yield err: 101.484
+PROTONS| idphi: 0.861731	 mean err: 0.00515898	 width: 0.123822	 width err: 0.00838647	 yield: 4513	 yield err: 67.1789

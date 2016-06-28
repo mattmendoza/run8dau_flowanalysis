@@ -1,0 +1,18 @@
+PIONS  | idphi: 0	 mean err: 7.41159e-005	 width: 0.0815028	 width err: 0.000116237	 yield: 6344	 yield err: 79.6492
+KAONS  | idphi: 0.2	 mean err: 0.00021289	 width: 0.0318689	 width err: 0.000148372	 yield: 6369	 yield err: 79.806
+PROTONS| idphi: 0.888152	 mean err: 0.00704187	 width: 0.120725	 width err: 0.0149152	 yield: 2867	 yield err: 53.5444
+PIONS  | idphi: 0	 mean err: 8.97296e-005	 width: 0.0815028	 width err: 0.000126691	 yield: 6132	 yield err: 78.3071
+KAONS  | idphi: 0.2	 mean err: 0.000223499	 width: 0.0318689	 width err: 0.000143319	 yield: 6158	 yield err: 78.4729
+PROTONS| idphi: 0.869475	 mean err: 0.00595292	 width: 0.114688	 width err: 0.0116257	 yield: 2822	 yield err: 53.1225
+PIONS  | idphi: 0	 mean err: 6.75388e-005	 width: 0.0815028	 width err: 9.15984e-005	 yield: 6118	 yield err: 78.2176
+KAONS  | idphi: 0.2	 mean err: 0.000208268	 width: 0.0318689	 width err: 0.000147162	 yield: 6034	 yield err: 77.6788
+PROTONS| idphi: 0.863232	 mean err: 0.00744258	 width: 0.126761	 width err: 0.01204	 yield: 2741	 yield err: 52.3546
+PIONS  | idphi: 0	 mean err: 7.88638e-005	 width: 0.0815028	 width err: 0.00013701	 yield: 5999	 yield err: 77.4532
+KAONS  | idphi: 0.2	 mean err: 0.000202934	 width: 0.0318689	 width err: 0.00014457	 yield: 5982	 yield err: 77.3434
+PROTONS| idphi: 0.853158	 mean err: 0.0074753	 width: 0.126761	 width err: 0.00972692	 yield: 2742	 yield err: 52.3641
+PIONS  | idphi: 0	 mean err: 8.31048e-005	 width: 0.0815028	 width err: 0.000125791	 yield: 6166	 yield err: 78.5239
+KAONS  | idphi: 0.2	 mean err: 0.000223941	 width: 0.0318689	 width err: 0.000149852	 yield: 6175	 yield err: 78.5812
+PROTONS| idphi: 0.871316	 mean err: 0.00905558	 width: 0.118071	 width err: 0.00710144	 yield: 2816	 yield err: 53.066
+PIONS  | idphi: 0	 mean err: 7.07531e-005	 width: 0.0815028	 width err: 0.000128291	 yield: 6322	 yield err: 79.511
+KAONS  | idphi: 0.2	 mean err: 0.000198501	 width: 0.0318689	 width err: 0.000135537	 yield: 6288	 yield err: 79.2969
+PROTONS| idphi: 0.865608	 mean err: 0.0103092	 width: 0.119714	 width err: 0.00664022	 yield: 2892	 yield err: 53.7773

@@ -1,0 +1,65 @@
+PIONS  | 	 idphi: 	0	 mean:	0.0181721	 mean err:	1.91284e-005	 width:	0.00856202	 width err: 	1.7414e-005	 yield:	231367	 yield err:	4.85801
+KAONS  | 	 idphi: 	0	 mean:	0.240807	 mean err:	0.00014991	 width:	0.0196096	 width err: 	0.000195149	 yield:	19153.3	 yield err:	1.43417
+PROTONS| 	 idphi: 	0	 mean:	0.885392	 mean err:	0.000438868	 width:	0.048	 width err: 	9.89384e-006	 yield:	22149	 yield err:	1.71562
+
+ALL ID TRACKS| 	 idphi: 	0	 yield:	272669	 yield err:	5.34794
+PIONS  | 	 idphi: 	1	 mean:	0.0181367	 mean err:	1.98682e-005	 width:	0.00942837	 width err: 	0	 yield:	228225	 yield err:	4.83168
+KAONS  | 	 idphi: 	1	 mean:	0.241158	 mean err:	0.000146669	 width:	0.0193296	 width err: 	0.000195826	 yield:	18887.6	 yield err:	1.43014
+PROTONS| 	 idphi: 	1	 mean:	0.885888	 mean err:	0.000466386	 width:	0.0504	 width err: 	1.16721e-005	 yield:	21834.4	 yield err:	1.73489
+
+ALL ID TRACKS| 	 idphi: 	1	 yield:	268947	 yield err:	5.32919
+PIONS  | 	 idphi: 	2	 mean:	0.0181544	 mean err:	1.99354e-005	 width:	0.00941544	 width err: 	0	 yield:	225913	 yield err:	4.80619
+KAONS  | 	 idphi: 	2	 mean:	0.240976	 mean err:	0.000149429	 width:	0.0194075	 width err: 	0.000195319	 yield:	18730.8	 yield err:	1.41396
+PROTONS| 	 idphi: 	2	 mean:	0.886873	 mean err:	0.00046645	 width:	0.0504	 width err: 	1.22855e-005	 yield:	21787.3	 yield err:	1.73976
+
+ALL ID TRACKS| 	 idphi: 	2	 yield:	266431	 yield err:	5.30335
+PIONS  | 	 idphi: 	3	 mean:	0.0180826	 mean err:	1.99252e-005	 width:	0.00940767	 width err: 	0	 yield:	226528	 yield err:	4.81264
+KAONS  | 	 idphi: 	3	 mean:	0.241379	 mean err:	0.000148352	 width:	0.019403	 width err: 	0.000192861	 yield:	18728.5	 yield err:	1.41991
+PROTONS| 	 idphi: 	3	 mean:	0.885937	 mean err:	0.000466929	 width:	0.0504	 width err: 	1.18711e-005	 yield:	21710.8	 yield err:	1.7301
+
+ALL ID TRACKS| 	 idphi: 	3	 yield:	266967	 yield err:	5.30762
+PIONS  | 	 idphi: 	4	 mean:	0.0181569	 mean err:	1.97328e-005	 width:	0.00939316	 width err: 	0	 yield:	228534	 yield err:	4.8325
+KAONS  | 	 idphi: 	4	 mean:	0.241362	 mean err:	0.0001471	 width:	0.0192929	 width err: 	0.00019376	 yield:	18974.8	 yield err:	1.41947
+PROTONS| 	 idphi: 	4	 mean:	0.886687	 mean err:	0.000473793	 width:	0.0504	 width err: 	1.09272e-005	 yield:	21789.8	 yield err:	1.73466
+
+ALL ID TRACKS| 	 idphi: 	4	 yield:	269299	 yield err:	5.32701
+PIONS  | 	 idphi: 	5	 mean:	0.0181395	 mean err:	1.9697e-005	 width:	0.00942078	 width err: 	0	 yield:	231593	 yield err:	4.86668
+KAONS  | 	 idphi: 	5	 mean:	0.241282	 mean err:	0.000150435	 width:	0.0196799	 width err: 	0.000203788	 yield:	19055.7	 yield err:	1.43
+PROTONS| 	 idphi: 	5	 mean:	0.885745	 mean err:	0.000463598	 width:	0.0504	 width err: 	1.17581e-005	 yield:	21946.7	 yield err:	1.73796
+
+ALL ID TRACKS| 	 idphi: 	5	 yield:	272596	 yield err:	5.3619
+
+
+
+v2allt[0] = 0.0110464; 		 v2errallt[0] = 5.2853e-006;
+v2pion[0] = 0.0132701; 		 v2errpion[0] = 1.22079e-005;
+v2kaon[0] = 0.0114359; 		 v2errkaon[0] = 4.3463e-005;
+v2prot[0] = 0.00793591;		 v2errprot[0] = 4.5693e-005;
+
+
+
+float ptrange[2] = {0.5,0.7};
+int    Nrebin            = 1;
+int    kUseLogLowBins    = 1;
+int    twogausfit        = 0;
+int    threegausfit      = 0;
+float  protmeanvariance  = 0.05;
+float  protwidthvariance = 0.05;
+float  pionmeanrange[2]  = {-0.1,0.05};
+float  kaonmeanrange[2]  = {0.15,0.35};
+float  protmeanrange[2]  = {0.7,0.9};
+float  pionwidthrange[2] = {0.001,0.08};
+float  kaonwidthrange[2] = {0.01,0.1};
+float  protwidthrange[2] = {0.001,0.048};
+float  pionfitrange[2]   = {-0.1,0.1};
+float  kaonfitrange[2]   = {0.2,0.3};
+float  protfitrange[2]   = {0.7,0.95};
+float tunepionheight[6] = {1.02,1.02,1.02,1.02,1.02,1.02};
+float tunepionwidth[6]  = {1.1,1,1,1,1,1};
+float tunepionmean[6]   = {0,0,0,0,0,0};
+float tunekaonheight[6] = {1,0.98,1,0.985,1,1};
+float tunekaonwidth[6]  = {0.78,0.76,0.78,0.76,0.78,0.78};
+float tunekaonmean[6]   = {0,0,0,0,0,0};
+float tuneprotheight[6] = {0.9,0.9,0.9,0.9,0.9,0.9};
+float tuneprotwidth[6]  = {0.85,0.85,0.85,0.85,0.85,0.85};
+float tuneprotmean[6]   = {0.005,0.005,0.005,0.005,0.005,0.005};

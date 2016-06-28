@@ -3,7 +3,8 @@ TString centbinrelabel[6] = {    "_MB","_cent0","_cent1","_cent2","_cent3", "_ce
 TString whichtoflabel[4] = {"tofe","tofw","tofwveto","tofwfire"};
 TString specieslabel[3] = {"pion","kaon","prot"};
 TString dphilabel[6] = {    "_dphi0","_dphi1","_dphi2","_dphi3","_dphi4","_dphi5"};
-TString chargelabel[2] = {"neg","pos"};
+//TString chargelabel[2] = {"neg","pos"};
+TString chargelabel[2] = {"negative","positive"};
 TString fPart[3] = {"pion","kaon","proton"};
 
 TString fPar = "par/";
