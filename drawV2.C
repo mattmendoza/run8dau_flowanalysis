@@ -79,17 +79,17 @@ v2rawterr[11]=0.000681793;
   gr_v2allt->SetMarkerSize(2.5); gr_v2allt->SetMarkerColor(6);  gr_v2allt->SetLineColor(6); gr_v2allt->SetMarkerStyle(29); 
   //gr_v2rawt->SetMarkerSize(2); gr_v2rawt->SetMarkerColor(1);  gr_v2rawt->SetLineWidth(2);  gr_v2rawt->SetLineColor(1); gr_v2rawt->SetMarkerStyle(22);  gr_v2rawt->Draw("P");
 
-  gr_v2pion->SetLineStyle(7); gr_v2pion->SetLineWidth(3);   gr_v2pion->Draw("CP");
-  gr_v2kaon->SetLineStyle(7); gr_v2kaon->SetLineWidth(3);   gr_v2kaon->Draw("CP");
-  gr_v2prot->SetLineStyle(7); gr_v2prot->SetLineWidth(3);   gr_v2prot->Draw("CP");
+  gr_v2pion->SetLineStyle(7); gr_v2pion->SetLineWidth(3);   gr_v2pion->Draw("P");
+  gr_v2kaon->SetLineStyle(7); gr_v2kaon->SetLineWidth(3);   gr_v2kaon->Draw("P");
+  gr_v2prot->SetLineStyle(7); gr_v2prot->SetLineWidth(3);   gr_v2prot->Draw("P");
   gr_v2allt->SetLineStyle(7); gr_v2allt->SetLineWidth(3);   //gr_v2allt->Draw("CP");
   
   legend = new TLegend(0.2,0.9,0.7,0.8,0);
-  legend->SetNColumns(2);   legend->SetBorderSize(0);
+  legend->SetNColumns(3);   legend->SetBorderSize(0);
   legend->AddEntry(gr_v2pion,"#pi+","p");
   legend->AddEntry(gr_v2kaon,"K+","p");
   legend->AddEntry(gr_v2prot,"P+","p");
-  legend->AddEntry(gr_v2allt,"all ID tracks (sum of #pi+k+P)","p");
+  //legend->AddEntry(gr_v2allt,"all ID tracks (sum of #pi+k+P)","p");
   //legend->AddEntry(gr_v2rawt,"all charged tracks","p");
   legend->Draw();
 
@@ -143,7 +143,23 @@ v2prot[6] = 0.0479764;     v2errprot[6] = 0.000297471;
 v2allt[7] = 0.0355309;     v2errallt[7] = 0.000236224;
 v2pion[7] = 0.0292939;     v2errpion[7] = 0.000318738;
 v2kaon[7] = 0.0426542;     v2errkaon[7] = 0.000418053;
-v2prot[7] = 0.047862;    v2errprot[7] = 0.0003126;
+v2prot[7] = 0.047862;      v2errprot[7] = 0.0003126;
+
+v2pion[8] = 0.0298951;     v2errpion[8] = 0.0004699;
+v2kaon[8] = 0.0443421;     v2errkaon[8] = 0.000666894;
+v2prot[8] = 0.0472266;     v2errprot[8] = 0.00062743;
+
+v2pion[9] = 0.0275577;     v2errpion[9] = 0.000650622;
+v2kaon[9] = 0.0369777;     v2errkaon[9] = 0.00081272;
+v2prot[9] = 0.0476927;     v2errprot[9] = 0.000769387;
+
+v2pion[10] = 0.0278351;      v2errpion[10] = 0.0211714;
+v2kaon[10] = 0.03378;      v2errkaon[10] = 0.00169447;
+v2prot[10] = 0.0456037;    v2errprot[10] = 0.00202961;
+
+v2pion[11] = 0.0282585;      v2errpion[11] = 0.00244153;
+v2kaon[11] = 0.0346992;      v2errkaon[11] = 0.00430782;
+v2prot[11] = 0.0435877;    v2errprot[11] = 0.00491859;
 
 
   //pt bin reference
