@@ -50,33 +50,32 @@ v2rawterr[10]=0.000605382;
 v2rawterr[11]=0.000681793;
 
 
-  TGraphErrors *gr_v2pion = new TGraphErrors(14,pt,v2pion,pterr,v2errpion);
-  TGraphErrors *gr_v2kaon = new TGraphErrors(14,pt,v2kaon,pterr,v2errkaon);
-  TGraphErrors *gr_v2prot = new TGraphErrors(14,pt,v2prot,pterr,v2errprot);
+  TGraphErrors *gr_v2pion = new TGraphErrors(15,pt,v2pion,pterr,v2errpion);
+  TGraphErrors *gr_v2kaon = new TGraphErrors(15,pt,v2kaon,pterr,v2errkaon);
+  TGraphErrors *gr_v2prot = new TGraphErrors(15,pt,v2prot,pterr,v2errprot);
   TGraphErrors *gr_v2allt = new TGraphErrors(12,pt,v2allt,pterr,v2errallt);
   TGraphErrors *gr_v2rawt = new TGraphErrors(12,pt,v2rawt,pterr,v2rawterr);
 
-  gr_v2pion->RemovePoint(12);
   c1 = new TCanvas("c1","c1",1200,1200);
   c1->cd();
-  drawFrame(0,0,3,0.3,"Transverse Momentum (GeV/c)","elliptic flow (v_{2})");
+  drawFrame(0,0,6,0.35,"Transverse Momentum (GeV/c)","elliptic flow (v_{2})");
   //drawTitle(.1,-.07,"Identified Particle Elliptic Flow (v_{2}), TOF.W + ACC",1,12,.03,0);
   drawTitle(.1,-.07,"Charged Track Elliptic Flow (v_{2})",1,12,.03,0);
-  gr_v2pion->RemovePoint(13);
-  gr_v2kaon->RemovePoint(13);
-  gr_v2prot->RemovePoint(13);
-  gr_v2rawt->RemovePoint(13);
+  //gr_v2pion->RemovePoint(13);
+  //gr_v2kaon->RemovePoint(13);
+  //gr_v2prot->RemovePoint(13);
+  //gr_v2rawt->RemovePoint(13);
 
-  gr_v2pion->RemovePoint(12);
-  gr_v2kaon->RemovePoint(12);
-  gr_v2prot->RemovePoint(12);
-  gr_v2rawt->RemovePoint(12);
+  //gr_v2pion->RemovePoint(12);
+  //gr_v2kaon->RemovePoint(12);
+  //gr_v2prot->RemovePoint(12);
+  //gr_v2rawt->RemovePoint(12);
 
   
-  gr_v2pion->SetMarkerSize(2.5); gr_v2pion->SetMarkerColor(pioncolor);  gr_v2pion->SetLineColor(pioncolor); gr_v2pion->SetMarkerStyle(20); 
-  gr_v2kaon->SetMarkerSize(2.5); gr_v2kaon->SetMarkerColor(kaoncolor);  gr_v2kaon->SetLineColor(kaoncolor); gr_v2kaon->SetMarkerStyle(20); 
-  gr_v2prot->SetMarkerSize(2.5); gr_v2prot->SetMarkerColor(protcolor);  gr_v2prot->SetLineColor(protcolor); gr_v2prot->SetMarkerStyle(20); 
-  gr_v2allt->SetMarkerSize(2.5); gr_v2allt->SetMarkerColor(6);  gr_v2allt->SetLineColor(6); gr_v2allt->SetMarkerStyle(29); 
+  gr_v2pion->SetMarkerSize(2.1); gr_v2pion->SetMarkerColor(pioncolor);  gr_v2pion->SetLineColor(pioncolor); gr_v2pion->SetMarkerStyle(20); 
+  gr_v2kaon->SetMarkerSize(2.1); gr_v2kaon->SetMarkerColor(kaoncolor);  gr_v2kaon->SetLineColor(kaoncolor); gr_v2kaon->SetMarkerStyle(20); 
+  gr_v2prot->SetMarkerSize(2.1); gr_v2prot->SetMarkerColor(protcolor);  gr_v2prot->SetLineColor(protcolor); gr_v2prot->SetMarkerStyle(20); 
+  gr_v2allt->SetMarkerSize(2.1); gr_v2allt->SetMarkerColor(6);  gr_v2allt->SetLineColor(6); gr_v2allt->SetMarkerStyle(29); 
   //gr_v2rawt->SetMarkerSize(2); gr_v2rawt->SetMarkerColor(1);  gr_v2rawt->SetLineWidth(2);  gr_v2rawt->SetLineColor(1); gr_v2rawt->SetMarkerStyle(22);  gr_v2rawt->Draw("P");
 
   gr_v2pion->SetLineStyle(7); gr_v2pion->SetLineWidth(3);   gr_v2pion->Draw("P");
@@ -84,7 +83,7 @@ v2rawterr[11]=0.000681793;
   gr_v2prot->SetLineStyle(7); gr_v2prot->SetLineWidth(3);   gr_v2prot->Draw("P");
   gr_v2allt->SetLineStyle(7); gr_v2allt->SetLineWidth(3);   //gr_v2allt->Draw("CP");
   
-  legend = new TLegend(0.2,0.9,0.7,0.8,0);
+  legend = new TLegend(0.2,0.9,0.7,0.85,0);
   legend->SetNColumns(3);   legend->SetBorderSize(0);
   legend->AddEntry(gr_v2pion,"#pi+","p");
   legend->AddEntry(gr_v2kaon,"K+","p");
@@ -102,6 +101,8 @@ void initParams()
   for(int i=0 ; i<=15 ; i++) {
     pt[i] = 0.5+i*0.2 +0.1;
     pterr[i] = 0.0;
+    if(i>11) pt[i] = 3.0 +((i-12)*0.5)+0.25;
+    if(i>=14) { pt[i] = 4.5+(i-14) + 0.5;  }
   }
 
 v2allt[0] = 0.0110464;     v2errallt[0] = 5.2853e-006;
@@ -135,19 +136,19 @@ v2pion[5] = 0.0262748;     v2errpion[5] = 8.90982e-005;
 v2kaon[5] = 0.033035;      v2errkaon[5] = 0.000152661;
 v2prot[5] = 0.0335092;     v2errprot[5] = 0.000208749;
 
-v2allt[6] = 0.0347729;     v2errallt[6] = 0.00013244;
-v2pion[6] = 0.0268752;     v2errpion[6] = 0.000141449;
-v2kaon[6] = 0.0417866;     v2errkaon[6] = 0.000239009;
-v2prot[6] = 0.0479764;     v2errprot[6] = 0.000297471;
+v2allt[6] = 0.0339546;     v2errallt[6] = 0.000132442;
+v2pion[6] = 0.0273248;     v2errpion[6] = 0.000141485;
+v2kaon[6] = 0.0398769;     v2errkaon[6] = 0.000238755;
+v2prot[6] = 0.0442805;     v2errprot[6] = 0.000297732;
 
-v2allt[7] = 0.0355309;     v2errallt[7] = 0.000236224;
-v2pion[7] = 0.0292939;     v2errpion[7] = 0.000318738;
-v2kaon[7] = 0.0426542;     v2errkaon[7] = 0.000418053;
-v2prot[7] = 0.047862;      v2errprot[7] = 0.0003126;
+v2allt[7] = 0.0350619;     v2errallt[7] = 0.000235844;
+v2pion[7] = 0.0299492;     v2errpion[7] = 0.000318159;
+v2kaon[7] = 0.0405051;     v2errkaon[7] = 0.000418546;
+v2prot[7] = 0.0478619;     v2errprot[7] = 0.0003126;
 
 v2pion[8] = 0.0298951;     v2errpion[8] = 0.0004699;
-v2kaon[8] = 0.0443421;     v2errkaon[8] = 0.000666894;
-v2prot[8] = 0.0472266;     v2errprot[8] = 0.00062743;
+v2kaon[8] = 0.0396922;     v2errkaon[8] = 0.000669895;
+v2prot[8] = 0.046966;      v2errprot[8] = 0.000632564;
 
 v2pion[9] = 0.0275577;     v2errpion[9] = 0.000650622;
 v2kaon[9] = 0.0369777;     v2errkaon[9] = 0.00081272;
@@ -160,6 +161,18 @@ v2prot[10] = 0.0456037;    v2errprot[10] = 0.00202961;
 v2pion[11] = 0.0282585;      v2errpion[11] = 0.00244153;
 v2kaon[11] = 0.0346992;      v2errkaon[11] = 0.00430782;
 v2prot[11] = 0.0435877;    v2errprot[11] = 0.00491859;
+
+v2pion[12] = 0.0248839;      v2errpion[12] = 0.00473314;
+v2kaon[12] = 0.0361253;      v2errkaon[12] = 0.0024278;
+v2prot[12] = 0.0434931;    v2errprot[12] = 0.00303396;
+
+v2pion[13] = 0.02625;      v2errpion[13] = 0.00746721;
+v2kaon[13] = 0.0418611;      v2errkaon[13] = 0.00525059;
+v2prot[13] = 0.0486657;    v2errprot[13] = 0.00656512;
+
+v2pion[14] = 0.025759;     v2errpion[14] = 0.00888207;
+v2kaon[14] = 0.0340744;      v2errkaon[14] = 0.00449614;
+v2prot[14] = 0.0631675;    v2errprot[14] = 0.006439;
 
 
   //pt bin reference
