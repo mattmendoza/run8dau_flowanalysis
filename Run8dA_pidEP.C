@@ -224,7 +224,9 @@ void CheckFitsEP(int itof, int icent, int ich, float ptrange[])
   drawTitle(.1,-.07,titlestring+lcomma+tofstring+lcomma+centbinlabel[icent+1]+centrality+lcomma+chargelabel[ich]+tracks,1,12,.03,0);
   gr_allIDyield->SetMarkerSize(YieldMarkerSize); gr_allIDyield->SetMarkerStyle(21);   gr_allIDyield->SetMarkerColor(1);    gr_allIDyield->Draw("P");
   gr_allIDyield->Fit("v2fit","Q","",0.05,M_PI-0.05);  gStyle->SetOptFit();
-  parfile << "v2allt[" << ptbin << "] = " << v2fit->GetParameter(0) << "; \t\t v2errallt[" << ptbin << "] = " << v2fit->GetParError(0) << ";" << endl;
+  
+  if(ich==0) parfile << "v2alltneg[" << ptbin << "] = " << v2fit->GetParameter(0) << "; \t\t v2erralltneg[" << ptbin << "] = " << v2fit->GetParError(0) << ";" << endl;
+  if(ich==1) parfile << "v2alltpos[" << ptbin << "] = " << v2fit->GetParameter(0) << "; \t\t v2erralltpos[" << ptbin << "] = " << v2fit->GetParError(0) << ";" << endl;
   sprintf(titlestring,"yieldvsdphi_tof%i_cent%i_ch%i_pT-%g-%g.jpg",itof,icent,ich,ptrange[0]*10,ptrange[1]*10);
   c_allT->SaveAs(titlestring);
 
@@ -279,7 +281,8 @@ void CheckFitsEP(int itof, int icent, int ich, float ptrange[])
   v2fit->SetLineColor(pioncolor);	v2fit->SetLineWidth(4);
   gr_pionyield->Fit("v2fit","Q","",0.05,M_PI-0.05);
   gStyle->SetOptFit();
-  parfile << "v2pion[" << ptbin << "] = " << v2fit->GetParameter(0) << "; \t\t v2errpion[" << ptbin << "] = " << v2fit->GetParError(0) << ";" << endl;
+  if(ich==0) parfile << "v2pionneg[" << ptbin << "] = " << v2fit->GetParameter(0) << "; \t\t v2errpionneg[" << ptbin << "] = " << v2fit->GetParError(0) << ";" << endl;
+  if(ich==1) parfile << "v2pionpos[" << ptbin << "] = " << v2fit->GetParameter(0) << "; \t\t v2errpionpos[" << ptbin << "] = " << v2fit->GetParError(0) << ";" << endl;
 
   
   c_yield->cd(2);
@@ -293,7 +296,8 @@ void CheckFitsEP(int itof, int icent, int ich, float ptrange[])
   gr_kaonyield->SetMarkerSize(YieldMarkerSize); gr_kaonyield->SetMarkerStyle(21);   gr_kaonyield->SetMarkerColor(kaoncolor);    gr_kaonyield->Draw("P");
   v2fit->SetLineColor(kaoncolor);	v2fit->SetLineWidth(4);
   gr_kaonyield->Fit("v2fit","Q","",0.05,M_PI-0.05);
-  parfile << "v2kaon[" << ptbin << "] = " << v2fit->GetParameter(0) << "; \t\t v2errkaon[" << ptbin << "] = " << v2fit->GetParError(0) << ";" << endl;
+  if(ich==0) parfile << "v2kaonneg[" << ptbin << "] = " << v2fit->GetParameter(0) << "; \t\t v2errkaonneg[" << ptbin << "] = " << v2fit->GetParError(0) << ";" << endl;
+  if(ich==1) parfile << "v2kaonpos[" << ptbin << "] = " << v2fit->GetParameter(0) << "; \t\t v2errkaonpos[" << ptbin << "] = " << v2fit->GetParError(0) << ";" << endl;
 
   c_yield->cd(3);
   float min = TMath::MinElement(6,gr_protyield->GetY());
@@ -306,7 +310,8 @@ void CheckFitsEP(int itof, int icent, int ich, float ptrange[])
   gr_protyield->SetMarkerSize(YieldMarkerSize); gr_protyield->SetMarkerStyle(21);   gr_protyield->SetMarkerColor(protcolor);    gr_protyield->Draw("P");
   v2fit->SetLineColor(protcolor);	v2fit->SetLineWidth(4);
   gr_protyield->Fit("v2fit","Q","",0.05,M_PI-0.05);
-  parfile << "v2prot[" << ptbin << "] = " << v2fit->GetParameter(0) << ";\t\t v2errprot[" << ptbin << "] = " << v2fit->GetParError(0) << ";" << endl;
+  if(ich==0) parfile << "v2protneg[" << ptbin << "] = " << v2fit->GetParameter(0) << ";\t\t v2errprotneg[" << ptbin << "] = " << v2fit->GetParError(0) << ";" << endl;
+  if(ich==1) parfile << "v2protpos[" << ptbin << "] = " << v2fit->GetParameter(0) << ";\t\t v2errprotpos[" << ptbin << "] = " << v2fit->GetParError(0) << ";" << endl;
 
   //c_yield->SaveAs(titlestring);
 
