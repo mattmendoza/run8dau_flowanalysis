@@ -1,40 +1,40 @@
-PIONS  | 	 idphi: 	0	 mean:	0.0169407	 mean err:	2.75901e-005	 width:	0.011514	 width err: 	2.67772e-005	 yield:	232806	 yield err:	4.77599
-KAONS  | 	 idphi: 	0	 mean:	0.24019	 mean err:	0.00015308	 width:	0.0217376	 width err: 	0.000179784	 yield:	23698.4	 yield err:	1.65893
-PROTONS| 	 idphi: 	0	 mean:	0.879765	 mean err:	0.000348713	 width:	0.043686	 width err: 	0.000412748	 yield:	20604.6	 yield err:	1.63859
+PIONS  | 	 idphi: 	0	 mean:	0.0167433	 mean err:	2.85653e-005	 width:	0.0111816	 width err: 	2.70889e-005	 yield:	198875	 yield err:	4.37814
+KAONS  | 	 idphi: 	0	 mean:	0.240545	 mean err:	0.00014961	 width:	0.0193869	 width err: 	0.000164778	 yield:	18204	 yield err:	1.40745
+PROTONS| 	 idphi: 	0	 mean:	0.879282	 mean err:	0.000364612	 width:	0.0413588	 width err: 	0.000397792	 yield:	15880	 yield err:	1.41533
 
-ALL ID TRACKS| 	 idphi: 	0	 yield:	277109	 yield err:	5.3148
-PIONS  | 	 idphi: 	1	 mean:	0.01714	 mean err:	2.95834e-005	 width:	0.0129616	 width err: 	0	 yield:	230863	 yield err:	4.76542
-KAONS  | 	 idphi: 	1	 mean:	0.240088	 mean err:	0.000151773	 width:	0.0215642	 width err: 	0.000178292	 yield:	23338	 yield err:	1.65082
-PROTONS| 	 idphi: 	1	 mean:	0.879752	 mean err:	0.000352241	 width:	0.0435654	 width err: 	0.000421444	 yield:	20321.5	 yield err:	1.61909
+ALL ID TRACKS| 	 idphi: 	0	 yield:	232959	 yield err:	4.81167
+PIONS  | 	 idphi: 	1	 mean:	0.016889	 mean err:	2.98865e-005	 width:	0.0122921	 width err: 	0	 yield:	192965	 yield err:	4.36176
+KAONS  | 	 idphi: 	1	 mean:	0.240423	 mean err:	0.000149118	 width:	0.0193233	 width err: 	0.000165646	 yield:	18010.7	 yield err:	1.407
+PROTONS| 	 idphi: 	1	 mean:	0.879067	 mean err:	0.000356259	 width:	0.0404454	 width err: 	0.0003859	 yield:	15644.3	 yield err:	1.3845
 
-ALL ID TRACKS| 	 idphi: 	1	 yield:	274522	 yield err:	5.29678
-PIONS  | 	 idphi: 	2	 mean:	0.0171112	 mean err:	2.97957e-005	 width:	0.0129479	 width err: 	0	 yield:	227120	 yield err:	4.73024
-KAONS  | 	 idphi: 	2	 mean:	0.240126	 mean err:	0.00015308	 width:	0.0215342	 width err: 	0.000181521	 yield:	23143.1	 yield err:	1.63031
-PROTONS| 	 idphi: 	2	 mean:	0.879739	 mean err:	0.000359842	 width:	0.044071	 width err: 	0.00041994	 yield:	20203.2	 yield err:	1.63601
+ALL ID TRACKS| 	 idphi: 	1	 yield:	226619	 yield err:	4.78763
+PIONS  | 	 idphi: 	2	 mean:	0.0168502	 mean err:	3.01546e-005	 width:	0.0122969	 width err: 	0	 yield:	193800	 yield err:	4.33087
+KAONS  | 	 idphi: 	2	 mean:	0.240394	 mean err:	0.00015058	 width:	0.0192506	 width err: 	0.000168316	 yield:	17779.5	 yield err:	1.38639
+PROTONS| 	 idphi: 	2	 mean:	0.879001	 mean err:	0.000366524	 width:	0.0414071	 width err: 	0.000395698	 yield:	15656.2	 yield err:	1.40155
 
-ALL ID TRACKS| 	 idphi: 	2	 yield:	270467	 yield err:	5.264
-PIONS  | 	 idphi: 	3	 mean:	0.0171786	 mean err:	2.99985e-005	 width:	0.0129767	 width err: 	0	 yield:	227985	 yield err:	4.7206
-KAONS  | 	 idphi: 	3	 mean:	0.240113	 mean err:	0.000154755	 width:	0.0217099	 width err: 	0.000179332	 yield:	23328.7	 yield err:	1.63908
-PROTONS| 	 idphi: 	3	 mean:	0.88091	 mean err:	0.000370892	 width:	0.0446315	 width err: 	0.000450422	 yield:	20071.2	 yield err:	1.65103
+ALL ID TRACKS| 	 idphi: 	2	 yield:	227235	 yield err:	4.75845
+PIONS  | 	 idphi: 	3	 mean:	0.0169044	 mean err:	3.03253e-005	 width:	0.0123036	 width err: 	0	 yield:	194616	 yield err:	4.32118
+KAONS  | 	 idphi: 	3	 mean:	0.240418	 mean err:	0.000150984	 width:	0.0193974	 width err: 	0.000164397	 yield:	17976.9	 yield err:	1.39692
+PROTONS| 	 idphi: 	3	 mean:	0.880203	 mean err:	0.000373753	 width:	0.0414169	 width err: 	0.000415472	 yield:	15445.8	 yield err:	1.40405
 
-ALL ID TRACKS| 	 idphi: 	3	 yield:	271385	 yield err:	5.26275
-PIONS  | 	 idphi: 	4	 mean:	0.0170549	 mean err:	2.98513e-005	 width:	0.0130101	 width err: 	0	 yield:	231351	 yield err:	4.75675
-KAONS  | 	 idphi: 	4	 mean:	0.239913	 mean err:	0.000155262	 width:	0.0217387	 width err: 	0.000184381	 yield:	23464.5	 yield err:	1.64069
-PROTONS| 	 idphi: 	4	 mean:	0.880279	 mean err:	0.000346002	 width:	0.0430639	 width err: 	0.000405987	 yield:	20362.8	 yield err:	1.61537
+ALL ID TRACKS| 	 idphi: 	3	 yield:	228038	 yield err:	4.75345
+PIONS  | 	 idphi: 	4	 mean:	0.0168071	 mean err:	3.02447e-005	 width:	0.0123739	 width err: 	0	 yield:	197392	 yield err:	4.35529
+KAONS  | 	 idphi: 	4	 mean:	0.240166	 mean err:	0.000148912	 width:	0.0190575	 width err: 	0.000167523	 yield:	17957	 yield err:	1.38466
+PROTONS| 	 idphi: 	4	 mean:	0.879662	 mean err:	0.00035358	 width:	0.0402862	 width err: 	0.000375859	 yield:	15771.8	 yield err:	1.3915
 
-ALL ID TRACKS| 	 idphi: 	4	 yield:	275179	 yield err:	5.28469
-PIONS  | 	 idphi: 	5	 mean:	0.0170949	 mean err:	2.96873e-005	 width:	0.0130225	 width err: 	0	 yield:	234203	 yield err:	4.78765
-KAONS  | 	 idphi: 	5	 mean:	0.239877	 mean err:	0.000154033	 width:	0.0217674	 width err: 	0.000181503	 yield:	23831.9	 yield err:	1.66336
-PROTONS| 	 idphi: 	5	 mean:	0.880631	 mean err:	0.00036058	 width:	0.0443386	 width err: 	0.000435133	 yield:	20559.6	 yield err:	1.65841
+ALL ID TRACKS| 	 idphi: 	4	 yield:	231121	 yield err:	4.77725
+PIONS  | 	 idphi: 	5	 mean:	0.0168307	 mean err:	3.00658e-005	 width:	0.0123762	 width err: 	0	 yield:	200221	 yield err:	4.38702
+KAONS  | 	 idphi: 	5	 mean:	0.240271	 mean err:	0.000150583	 width:	0.0194413	 width err: 	0.000169548	 yield:	18263.9	 yield err:	1.40858
+PROTONS| 	 idphi: 	5	 mean:	0.879738	 mean err:	0.000365733	 width:	0.0414597	 width err: 	0.00040986	 yield:	15823.8	 yield err:	1.41603
 
-ALL ID TRACKS| 	 idphi: 	5	 yield:	278594	 yield err:	5.33279
+ALL ID TRACKS| 	 idphi: 	5	 yield:	234309	 yield err:	4.82029
 
 
 
-v2alltneg[1] = 0.0145216; 		 v2erralltneg[1] = 0.561255;
-v2pionneg[1] = 0.014898; 		 v2errpionneg[1] = 1.18947e-005;
-v2kaonneg[1] = 0.0130018; 		 v2errkaonneg[1] = 4.05389e-005;
-v2protneg[1] = 0.0126098;		 v2errprotneg[1] = 4.66887e-005;
+v2alltneg[1] = 0.015009; 		 v2erralltneg[1] = 1.20154e-005;
+v2pionneg[1] = 0.0156552; 		 v2errpionneg[1] = 1.2805e-005;
+v2kaonneg[1] = 0.0113971; 		 v2errkaonneg[1] = 4.48186e-005;
+v2protneg[1] = 0.0110577;		 v2errprotneg[1] = 5.18096e-005;
 
 
 
@@ -57,7 +57,7 @@ float  protfitrange[2]   = {0.7,0.95};
 float tunepionheight[6] = {1.1,1.09,1.09,1.1,1.1,1.1};
 float tunepionwidth[6]  = {1.05,0.93,0.948,0.95,0.95,0.952};
 float tunepionmean[6]   = {0,0,0,0,0,0};
-float tunekaonheight[6] = {0.965,0.955,0.97,0.972,0.98,0.97};
+float tunekaonheight[6] = {0.965,0.955,0.97,0.968,0.98,0.97};
 float tunekaonwidth[6]  = {0.84,0.84,0.84,0.84,0.84,0.84};
 float tunekaonmean[6]   = {0,0,0,0,0,0};
 float tuneprotheight[6] = {0.92,0.93,0.925,0.92,0.93,0.92};

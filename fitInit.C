@@ -112,7 +112,7 @@ int setTuning;
 //20    4.5   4.7
 //21    4.7   4.9
 //22    4.9   5.1
-  int ptbin = 3;
+  int ptbin = 5;
 
 //manually override final fit params by visual
 

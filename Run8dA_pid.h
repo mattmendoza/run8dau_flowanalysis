@@ -37,7 +37,7 @@ TCanvas *Canvas = new TCanvas("Canvas","",0,0,800,500);
 TCanvas *c1 = new TCanvas("c1","c1",1000,1000);
 TH1F * h_m2vspt_allphi;
   TH1D *h;  
-TFile infile("anaacc2698.root");
+TFile infile("anaacc2698_new.root");
 
 TF1 *f_pionsigma, *f_kaonsigma, *f_protsigma;
 

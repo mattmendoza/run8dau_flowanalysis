@@ -50,13 +50,13 @@ parstruct loadFitParamsNeg(int ptbin) {
     float kaonfitrange[2]   = {0.2,0.3};
     float protfitrange[2]   = {0.7,0.95};
     float tunepionheight[6] = {1.02,1.02,1.02,1.02,1.02,1.02};
-    float tunepionwidth[6]  = {1.1,1,1,1,1,1};
+    float tunepionwidth[6]  = {1.05,1,1,1,1,1};
     float tunepionmean[6]   = {0,0,0,0,0,0};
-    float tunekaonheight[6] = {1.01,1,1,1,1,1};
+    float tunekaonheight[6] = {1.02,0.99,1,1,1,1};
     float tunekaonwidth[6]  = {0.85,0.78,0.78,0.78,0.78,0.78};
     float tunekaonmean[6]   = {0,0,0,0,0,0};
-    float tuneprotheight[6] = {0.9,0.9,0.9,0.9,0.89,0.89};
-    float tuneprotwidth[6]  = {0.78,0.78,0.78,0.78,0.78,0.77};
+    float tuneprotheight[6] = {0.9,0.9,0.9,0.9,0.89,0.91};
+    float tuneprotwidth[6]  = {0.78,0.81,0.8,0.76,0.78,0.77};
     float tuneprotmean[6]   = {-0.002,-0.002,-0.005,-0.005,-0.00,-0.002};
   }
   
@@ -81,7 +81,7 @@ parstruct loadFitParamsNeg(int ptbin) {
     float tunepionheight[6] = {1.1,1.09,1.09,1.1,1.1,1.1};
     float tunepionwidth[6]  = {1.05,0.93,0.948,0.95,0.95,0.952};
     float tunepionmean[6]   = {0,0,0,0,0,0};
-    float tunekaonheight[6] = {0.965,0.955,0.97,0.972,0.98,0.97};
+    float tunekaonheight[6] = {0.965,0.955,0.97,0.968,0.98,0.97};
     float tunekaonwidth[6]  = {0.84,0.84,0.84,0.84,0.84,0.84};
     float tunekaonmean[6]   = {0,0,0,0,0,0};
     float tuneprotheight[6] = {0.92,0.93,0.925,0.92,0.93,0.92};
@@ -107,13 +107,13 @@ parstruct loadFitParamsNeg(int ptbin) {
     float  pionfitrange[2]   = {-0.1,0.1};
     float  kaonfitrange[2]   = {0.2,0.3};
     float  protfitrange[2]   = {0.7,0.95};
-    float tunepionheight[6] = {1.11,1.11,1.11,1.12,1.12,1.12};
+    float tunepionheight[6] = {1.12,1.11,1.11,1.12,1.12,1.12};
     float tunepionwidth[6]  = {1.02,0.94,0.94,0.96,0.95,0.94};
     float tunepionmean[6]   = {0,0,0,0,0,0};
-    float tunekaonheight[6] = {0.98,0.98,0.99,0.99,0.985,0.99};
+    float tunekaonheight[6] = {0.99,0.98,0.99,0.99,0.985,0.99};
     float tunekaonwidth[6]  = {0.9,0.9,0.9,0.9,0.9,0.9};
     float tunekaonmean[6]   = {0,0,0,0,0,0};
-    float tuneprotheight[6] = {0.965,0.97,0.95,0.99,0.985,0.98};
+    float tuneprotheight[6] = {0.965,0.97,0.95,0.97,0.983,0.98};
     float tuneprotwidth[6]  = {0.87,0.86,0.85,0.88,0.88,0.87};
     float tuneprotmean[6]   = {0,0,0,0,0,0};
 
@@ -140,10 +140,10 @@ parstruct loadFitParamsNeg(int ptbin) {
     float tunepionheight[6] = {1.01,0.99,0.98,0.99,0.995,1.005};
     float tunepionwidth[6]  = {0.97,0.9,0.88,0.88,0.9,0.92};
     float tunepionmean[6]   = {0,0,0,0,0,0};
-    float tunekaonheight[6] = {1.02,0.98,1.01,1.05,1.03,1.03};
+    float tunekaonheight[6] = {1.04,1,1.02,1.05,1.03,1.03};
     float tunekaonwidth[6]  = {0.98,0.98,1,1.03,1.01,1};
     float tunekaonmean[6]   = {0,0,0,0,0,0};
-    float tuneprotheight[6] = {1.02,1.02,1.02,1.02,1,1.01};
+    float tuneprotheight[6] = {1.02,1.02,1.04,1.02,1,1.01};
     float tuneprotwidth[6]  = {1.1,1.02,1.06,1.02,1.02,1};
     float tuneprotmean[6]   = {0.005,0.005,0.005,0.005,0.005,0.002};
   }
@@ -166,14 +166,14 @@ parstruct loadFitParamsNeg(int ptbin) {
     float  pionfitrange[2]   = {-0.05,0.05};
     float  kaonfitrange[2]   = {0.18,0.28};
     float  protfitrange[2]   = {0.8,0.9};
-    float tunepionheight[6] = {1,1,1,1,0.98,1};
-    float tunepionwidth[6]  = {0.92,0.92,0.92,0.9,0.89,0.91};
+    float tunepionheight[6] = {1.03,1.02,1.02,1.03,1.03,1.03};
+    float tunepionwidth[6]  = {0.92,0.92,0.92,0.92,0.92,0.91};
     float tunepionmean[6]   = {0,0,0,0,0,0};
-    float tunekaonheight[6] = {0.96,0.95,0.95,0.95,0.95,0.96};
-    float tunekaonwidth[6]  = {0.98,1,0.98,1,1,1};
+    float tunekaonheight[6] = {1.02,1.02,1,1,1.01,1.04};
+    float tunekaonwidth[6]  = {0.95,1,0.93,0.98,0.98,1};
     float tunekaonmean[6]   = {0.002,0,0,0,0,0};
-    float tuneprotheight[6] = {1.08,1.02,1.02,1.03,1.0,1.02};
-    float tuneprotwidth[6]  = {1.07,1.06,1.03,1.06,1.06,1.03};
+    float tuneprotheight[6] = {1.1,1.02,1.03,1.03,1.01,1.04};
+    float tuneprotwidth[6]  = {1.1,1.06,1.03,1.06,1.04,1.03};
     float tuneprotmean[6]   = {0,0,0,0,0,0};
   }
 
@@ -198,10 +198,10 @@ parstruct loadFitParamsNeg(int ptbin) {
     float tunepionheight[6] = {1.00,1.00,1.00,1.01,1.0,1.0};
     float tunepionwidth[6]  = {0.9,0.91,0.90,0.90,0.91,0.89};
     float tunepionmean[6]   = {0,0,0,0,0,0};
-    float tunekaonheight[6] = {1.06,1.03,1.03,1.04,1.07,1.05};
-    float tunekaonwidth[6]  = {1.02,1.02,0.98,1.01,1.01,1.04};
+    float tunekaonheight[6] = {1.08,1.05,1.01,1.02,1.05,1.05};
+    float tunekaonwidth[6]  = {1.02,1.02,0.96,0.98,0.99,1.04};
     float tunekaonmean[6]   = {-0.01,-0.01,-0.01,-0.01,-0.01,-0.01};
-    float tuneprotheight[6] = {0.97,1,0.99,0.98,1.0,0.99};
+    float tuneprotheight[6] = {0.97,1,0.99,0.98,0.99,0.98};
     float tuneprotwidth[6]  = {0.96,0.94,0.95,0.97,0.99,0.97};
     float tuneprotmean[6]   = {0,0,0,0,0,0};
   }

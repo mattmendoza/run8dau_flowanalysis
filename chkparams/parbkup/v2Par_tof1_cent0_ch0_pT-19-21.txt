@@ -1,40 +1,40 @@
-PIONS  | 	 idphi: 	0	 mean:	0	 mean err:	0.000127456	 width:	0.0692995	 width err: 	0.000926993	 yield:	8457.5	 yield err:	4.35759
-KAONS  | 	 idphi: 	0	 mean:	0.217059	 mean err:	0.00298339	 width:	0.0263249	 width err: 	0.000277902	 yield:	3853.75	 yield err:	2.82459
-PROTONS| 	 idphi: 	0	 mean:	0.864867	 mean err:	0.00576676	 width:	0.104177	 width err: 	0.00927232	 yield:	3387.77	 yield err:	9.80355
+PIONS  | 	 idphi: 	0	 mean:	0	 mean err:	6.78472e-005	 width:	0.0658937	 width err: 	0.00103479	 yield:	6902.84	 yield err:	4.15717
+KAONS  | 	 idphi: 	0	 mean:	0.207028	 mean err:	0.00303306	 width:	0.0221851	 width err: 	0.0055084	 yield:	2734.65	 yield err:	2.80579
+PROTONS| 	 idphi: 	0	 mean:	0.867323	 mean err:	0.00668899	 width:	0.10424	 width err: 	0.0101891	 yield:	2800.5	 yield err:	9.05339
 
-ALL ID TRACKS| 	 idphi: 	0	 yield:	15699	 yield err:	11.094
-PIONS  | 	 idphi: 	1	 mean:	0	 mean err:	0.000343937	 width:	0.0668852	 width err: 	0.000967965	 yield:	8351.38	 yield err:	4.39833
-KAONS  | 	 idphi: 	1	 mean:	0.21076	 mean err:	0.00352651	 width:	0.0262414	 width err: 	0.000204227	 yield:	3726.89	 yield err:	2.84099
-PROTONS| 	 idphi: 	1	 mean:	0.866	 mean err:	0.00495012	 width:	0.109386	 width err: 	0.0104177	 yield:	3250.47	 yield err:	3.06489
+ALL ID TRACKS| 	 idphi: 	0	 yield:	12438	 yield err:	10.3498
+PIONS  | 	 idphi: 	1	 mean:	0	 mean err:	8.31828e-005	 width:	0.0631142	 width err: 	0.00103786	 yield:	6800.17	 yield err:	3.94153
+KAONS  | 	 idphi: 	1	 mean:	0.198218	 mean err:	0.0033183	 width:	0.025249	 width err: 	0.00502321	 yield:	2688.44	 yield err:	2.44747
+PROTONS| 	 idphi: 	1	 mean:	0.864593	 mean err:	0.00666871	 width:	0.104123	 width err: 	0.00743547	 yield:	2555.96	 yield err:	8.52942
 
-ALL ID TRACKS| 	 idphi: 	1	 yield:	15328.7	 yield err:	6.06713
-PIONS  | 	 idphi: 	2	 mean:	0	 mean err:	0.000115997	 width:	0.0701727	 width err: 	0.000968167	 yield:	8149.28	 yield err:	4.26748
-KAONS  | 	 idphi: 	2	 mean:	0.220711	 mean err:	0.00276604	 width:	0.0188059	 width err: 	0.000437619	 yield:	3616.82	 yield err:	2.5976
-PROTONS| 	 idphi: 	2	 mean:	0.85982	 mean err:	0.00396582	 width:	0.0989684	 width err: 	0.00662918	 yield:	3096.68	 yield err:	2.74531
+ALL ID TRACKS| 	 idphi: 	1	 yield:	12044.6	 yield err:	9.70963
+PIONS  | 	 idphi: 	2	 mean:	0	 mean err:	7.87133e-005	 width:	0.0673388	 width err: 	0.00102531	 yield:	6425.79	 yield err:	3.7976
+KAONS  | 	 idphi: 	2	 mean:	0.212084	 mean err:	0.0028362	 width:	0.0110208	 width err: 	0.00760295	 yield:	2514.82	 yield err:	2.33791
+PROTONS| 	 idphi: 	2	 mean:	0.861815	 mean err:	0.00436712	 width:	0.0990284	 width err: 	0.00656209	 yield:	2532	 yield err:	2.50199
 
-ALL ID TRACKS| 	 idphi: 	2	 yield:	14862.8	 yield err:	5.70049
-PIONS  | 	 idphi: 	3	 mean:	0	 mean err:	8.70757e-005	 width:	0.0685165	 width err: 	0.000972126	 yield:	8075.29	 yield err:	4.24849
-KAONS  | 	 idphi: 	3	 mean:	0.208753	 mean err:	0.00302894	 width:	0.0232898	 width err: 	0.000491346	 yield:	3591.04	 yield err:	2.79301
-PROTONS| 	 idphi: 	3	 mean:	0.858751	 mean err:	0.0039053	 width:	0.0989684	 width err: 	0.00221664	 yield:	3117.43	 yield err:	2.75216
+ALL ID TRACKS| 	 idphi: 	2	 yield:	11472.6	 yield err:	5.11346
+PIONS  | 	 idphi: 	3	 mean:	0	 mean err:	7.55763e-005	 width:	0.0654213	 width err: 	0.00104815	 yield:	6595.77	 yield err:	3.74161
+KAONS  | 	 idphi: 	3	 mean:	0.20001	 mean err:	0.00257109	 width:	0.014872	 width err: 	0.00523706	 yield:	2518.54	 yield err:	2.26458
+PROTONS| 	 idphi: 	3	 mean:	0.860074	 mean err:	0.00433871	 width:	0.0990284	 width err: 	0.00230377	 yield:	2506.69	 yield err:	2.47992
 
-ALL ID TRACKS| 	 idphi: 	3	 yield:	14783.8	 yield err:	5.78143
-PIONS  | 	 idphi: 	4	 mean:	0	 mean err:	0.00010566	 width:	0.07021	 width err: 	0.000966491	 yield:	8247.44	 yield err:	4.28421
-KAONS  | 	 idphi: 	4	 mean:	0.215154	 mean err:	0.00334551	 width:	0.0313906	 width err: 	0.000296738	 yield:	3736.96	 yield err:	2.75332
-PROTONS| 	 idphi: 	4	 mean:	0.867543	 mean err:	0.00494964	 width:	0.109386	 width err: 	0.0100561	 yield:	3252.5	 yield err:	3.10425
+ALL ID TRACKS| 	 idphi: 	3	 yield:	11621	 yield err:	5.02773
+PIONS  | 	 idphi: 	4	 mean:	0	 mean err:	6.59799e-005	 width:	0.0658342	 width err: 	0.00107468	 yield:	6467.9	 yield err:	3.99977
+KAONS  | 	 idphi: 	4	 mean:	0.204436	 mean err:	0.00307402	 width:	0.0237509	 width err: 	0.00624325	 yield:	2638.67	 yield err:	2.62997
+PROTONS| 	 idphi: 	4	 mean:	0.864209	 mean err:	0.0045251	 width:	0.0990284	 width err: 	0.00836922	 yield:	2478.43	 yield err:	2.53382
 
-ALL ID TRACKS| 	 idphi: 	4	 yield:	15236.9	 yield err:	5.96419
-PIONS  | 	 idphi: 	5	 mean:	0	 mean err:	0.000121396	 width:	0.0693077	 width err: 	0.00100552	 yield:	8541.64	 yield err:	4.35911
-KAONS  | 	 idphi: 	5	 mean:	0.214565	 mean err:	0.00312205	 width:	0.0263269	 width err: 	0.00031607	 yield:	3834.98	 yield err:	2.81965
-PROTONS| 	 idphi: 	5	 mean:	0.865607	 mean err:	0.00396379	 width:	0.0989684	 width err: 	0.00722159	 yield:	3353.5	 yield err:	2.8648
+ALL ID TRACKS| 	 idphi: 	4	 yield:	11585	 yield err:	5.41619
+PIONS  | 	 idphi: 	5	 mean:	0	 mean err:	7.22721e-005	 width:	0.0649791	 width err: 	0.00110072	 yield:	6952.84	 yield err:	4.20492
+KAONS  | 	 idphi: 	5	 mean:	0.203771	 mean err:	0.00312716	 width:	0.0233249	 width err: 	0.00480798	 yield:	2775.72	 yield err:	2.89819
+PROTONS| 	 idphi: 	5	 mean:	0.871685	 mean err:	0.00444419	 width:	0.0990284	 width err: 	0.00742253	 yield:	2709.45	 yield err:	2.66329
 
-ALL ID TRACKS| 	 idphi: 	5	 yield:	15730.1	 yield err:	5.92953
+ALL ID TRACKS| 	 idphi: 	5	 yield:	12438	 yield err:	5.75968
 
 
 
-v2alltneg[7] = 0.0340497; 		 v2erralltneg[7] = 0.000167305;
-v2pionneg[7] = 0.0269309; 		 v2errpionneg[7] = 0.000299497;
-v2kaonneg[7] = 0.0371338; 		 v2errkaonneg[7] = 0.000426603;
-v2protneg[7] = 0.0452965;		 v2errprotneg[7] = 0.000582864;
+v2alltneg[7] = 0.0403298; 		 v2erralltneg[7] = 0.000292584;
+v2pionneg[7] = 0.0353522; 		 v2errpionneg[7] = 0.00034218;
+v2kaonneg[7] = 0.0528272; 		 v2errkaonneg[7] = 0.000557646;
+v2protneg[7] = 0.0380506;		 v2errprotneg[7] = 0.00067613;
 
 
 
