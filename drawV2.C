@@ -35,6 +35,7 @@ void drawV2()
 
   float v2rawt[12] = {0.054412765, 0.067165588, 0.080514672, 0.093017545, 0.101842096, 0.105409385, 0.100016631, 0.108548677, 0.119417338, 0.102892277, 0.148518644, 0.161019072};
   initParams();
+
   for(int ipt=0;ipt<=14;ipt++) {
     v2pionpos[ipt] = resCorr_r8dA(v2pionpos[ipt],1,0);
     v2kaonpos[ipt] = resCorr_r8dA(v2kaonpos[ipt],1,0);
@@ -64,21 +65,21 @@ v2rawterr[10]=0.000605382;
 v2rawterr[11]=0.000681793;
 
 
-  TGraphErrors *gr_v2pionpos = new TGraphErrors(8,pt,v2pionpos,pterr,v2errpionpos);
-  TGraphErrors *gr_v2kaonpos = new TGraphErrors(8,pt,v2kaonpos,pterr,v2errkaonpos);
-  TGraphErrors *gr_v2protpos = new TGraphErrors(8,pt,v2protpos,pterr,v2errprotpos);
+  TGraphErrors *gr_v2pionpos = new TGraphErrors(15,pt,v2pionpos,pterr,v2errpionpos);
+  TGraphErrors *gr_v2kaonpos = new TGraphErrors(15,pt,v2kaonpos,pterr,v2errkaonpos);
+  TGraphErrors *gr_v2protpos = new TGraphErrors(15,pt,v2protpos,pterr,v2errprotpos);
   TGraphErrors *gr_v2alltpos = new TGraphErrors(12,pt,v2alltpos,pterr,v2erralltpos);
 
-  TGraphErrors *gr_v2pionneg = new TGraphErrors(8,pt,v2pionneg,pterr,v2errpionneg);
-  TGraphErrors *gr_v2kaonneg = new TGraphErrors(8,pt,v2kaonneg,pterr,v2errkaonneg);
-  TGraphErrors *gr_v2protneg = new TGraphErrors(8,pt,v2protneg,pterr,v2errprotneg);
+  TGraphErrors *gr_v2pionneg = new TGraphErrors(15,pt,v2pionneg,pterr,v2errpionneg);
+  TGraphErrors *gr_v2kaonneg = new TGraphErrors(15,pt,v2kaonneg,pterr,v2errkaonneg);
+  TGraphErrors *gr_v2protneg = new TGraphErrors(15,pt,v2protneg,pterr,v2errprotneg);
   TGraphErrors *gr_v2alltneg = new TGraphErrors(12,pt,v2alltneg,pterr,v2erralltneg);
 
   TGraphErrors *gr_v2rawt = new TGraphErrors(12,pt,v2rawt,pterr,v2rawterr);
 
-  c1 = new TCanvas("c1","c1",2000,1500);
+  c1 = new TCanvas("c1","c1",3000,2000);
   c1->cd();
-  drawFrame(0,0,5,0.5,"Transverse Momentum (GeV/c)","elliptic flow (v_{2})");
+  drawFrame(0,0,5,0.3,"Transverse Momentum (GeV/c)","elliptic flow (v_{2})");
   //drawTitle(.1,-.07,"Identified Particle Elliptic Flow (v_{2}), TOF.W + ACC",1,12,.03,0);
   drawTitle(.1,-.07,"Charged Track Elliptic Flow (v_{2})",1,12,.03,0);
   //gr_v2pion->RemovePoint(13);
@@ -178,33 +179,34 @@ v2pionpos[7] = 0.0336751;      v2errpionpos[7] = 0.000363713;
 v2kaonpos[7] = 0.0393055;      v2errkaonpos[7] = 0.000551467;
 v2protpos[7] = 0.046838;     v2errprotpos[7] = 0.000337257;
 
-v2pionpos[8] = 0.0298951;     v2errpionpos[8] = 0.0004699;
-v2kaonpos[8] = 0.0396922;     v2errkaonpos[8] = 0.000669895;
-v2protpos[8] = 0.046966;      v2errprotpos[8] = 0.000632564;
+v2pionpos[8] = 0.0326042;      v2errpionpos[8] = 0.000468384;
+v2kaonpos[8] = 0.0396922;      v2errkaonpos[8] = 0.000669895;
+v2protpos[8] = 0.046966;     v2errprotpos[8] = 0.000632564;
 
-v2pionpos[9] = 0.0275577;     v2errpionpos[9] = 0.000650622;
-v2kaonpos[9] = 0.0369777;     v2errkaonpos[9] = 0.00081272;
-v2protpos[9] = 0.0476927;     v2errprotpos[9] = 0.000769387;
+v2pionpos[9] = 0.0326037;      v2errpionpos[9] = 0.000647512;
+v2kaonpos[9] = 0.0360695;      v2errkaonpos[9] = 0.000810233;
+v2protpos[9] = 0.047532;     v2errprotpos[9] = 0.000769459;
 
-v2pionpos[10] = 0.0278351;    v2errpionpos[10] = 0.0211714;
-v2kaonpos[10] = 0.03378;      v2errkaonpos[10] = 0.00169447;
-v2protpos[10] = 0.0456037;    v2errprotpos[10] = 0.00202961;
+v2pionpos[10] = 0.0327988;     v2errpionpos[10] = 0.00184278;
+v2kaonpos[10] = 0.03378;     v2errkaonpos[10] = 0.00169447;
+v2protpos[10] = 0.0456037;     v2errprotpos[10] = 0.00202961;
 
-v2pionpos[11] = 0.0282585;    v2errpionpos[11] = 0.00244153;
-v2kaonpos[11] = 0.0346992;    v2errkaonpos[11] = 0.00430782;
-v2protpos[11] = 0.0435877;    v2errprotpos[11] = 0.00491859;
+v2pionpos[11] = 0.0335232;     v2errpionpos[11] = 0.00241892;
+v2kaonpos[11] = 0.0341182;     v2errkaonpos[11] = 0.0043093;
+v2protpos[11] = 0.0433872;     v2errprotpos[11] = 0.00491914;
 
-v2pionpos[12] = 0.0248839;    v2errpionpos[12] = 0.00473314;
-v2kaonpos[12] = 0.0361253;    v2errkaonpos[12] = 0.0024278;
-v2protpos[12] = 0.0434931;    v2errprotpos[12] = 0.00303396;
+v2pionpos[12] = 0.0329689;     v2errpionpos[12] = 0.00474479;
+v2kaonpos[12] = 0.0339862;     v2errkaonpos[12] = 0.00242974;
+v2protpos[12] = 0.043666;    v2errprotpos[12] = 0.003034;
 
-v2pionpos[13] = 0.030272;      v2errpionpos[13] = 0.00644539;
-v2kaonpos[13] = 0.0890235;     v2errkaonpos[13] = 0.00970629;
-v2protpos[13] = 0.0213572;     v2errprotpos[13] = 0.00357928;
+v2pionpos[13] = 0.0316514;     v2errpionpos[13] = 0.00778246;
+v2kaonpos[13] = 0.0344744;     v2errkaonpos[13] = 0.00809327;
+v2protpos[13] = 0.0441567;     v2errprotpos[13] = 0.00361229;
 
-v2pionpos[14] = 0.025759;     v2errpionpos[14] = 0.00888207;
-v2kaonpos[14] = 0.0340744;    v2errkaonpos[14] = 0.00449614;
-v2protpos[14] = 0.0631675;    v2errprotpos[14] = 0.006439;
+
+v2pionpos[14] = 0.0317127;     v2errpionpos[14] = 0.00883035;
+v2kaonpos[14] = 0.0342252;     v2errkaonpos[14] = 0.00824922;
+v2protpos[14] = 0.0467843;     v2errprotpos[14] = 0.0043356;
 
 ///////////////////////////////////////////////////////////////////////////Neg v2s begin here///////////////////////////////////////////
 
@@ -238,40 +240,43 @@ v2pionneg[5] = 0.0309382;      v2errpionneg[5] = 9.7712e-005;
 v2kaonneg[5] = 0.039378;     v2errkaonneg[5] = 0.000187254;
 v2protneg[5] = 0.0368732;    v2errprotneg[5] = 0.000338683;
 
-v2alltneg[6] = 0.0330857;      v2erralltneg[6] = 0.000251937;
-v2pionneg[6] = 0.03046;      v2errpionneg[6] = 0.000317745;
-v2kaonneg[6] = 0.0273039;      v2errkaonneg[6] = 0.000610792;
-v2protneg[6] = 0.0466697;    v2errprotneg[6] = 0.000553187;
+v2alltneg[6] = 0.0366022;      v2erralltneg[6] = 7.68003e-005;
+v2pionneg[6] = 0.0323751;      v2errpionneg[6] = 0.000162868;
+v2kaonneg[6] = 0.0394184;      v2errkaonneg[6] = 0.000301149;
+v2protneg[6] = 0.0465922;    v2errprotneg[6] = 0.00028577;
 
-v2alltneg[7] = 0.0403298;      v2erralltneg[7] = 0.000292584;
-v2pionneg[7] = 0.0353522;      v2errpionneg[7] = 0.00034218;
-v2kaonneg[7] = 0.0528272;      v2errkaonneg[7] = 0.000557646;
-v2protneg[7] = 0.0380506;    v2errprotneg[7] = 0.00067613;
+v2alltneg[7] = 0.0372947;      v2erralltneg[7] = 0.000293688;
+v2pionneg[7] = 0.033127;     v2errpionneg[7] = 0.000343079;
+v2kaonneg[7] = 0.0411851;      v2errkaonneg[7] = 0.000558054;
+v2protneg[7] = 0.0464645;    v2errprotneg[7] = 0.000680168;
 
-v2pionneg[8] = 0.0282388;      v2errpionneg[8] = 0.000504408;
-v2kaonneg[8] = 0.0399862;     v2errkaonneg[8] = 0.000628708;
-v2protneg[8] = 0.0508686;     v2errprotneg[8] = 0.000653833;
+v2pionneg[8] = 0.0335825;      v2errpionneg[8] = 0.000504641;
+v2kaonneg[8] = 0.0389648;      v2errkaonneg[8] = 0.000622305;
+v2protneg[8] = 0.0472923;    v2errprotneg[8] = 0.00065327;
 
-v2pionneg[9] = 0.0294254;      v2errpionneg[9] = 0.000733668;
-v2kaonneg[9] = 0.0400348;      v2errkaonneg[9] = 0.000879399;
-v2protneg[9] = 0.0472006;    v2errprotneg[9] = 0.000866769;
+v2pionneg[9] = 0.0335367;      v2errpionneg[9] = 0.00073306;
+v2kaonneg[9] = 0.0373682;      v2errkaonneg[9] = 0.000883844;
+v2protneg[9] = 0.0472011;    v2errprotneg[9] = 0.000866766;
 
-v2pionneg[10] = 0.0297185;     v2errpionneg[10] = 0.00161919;
-v2kaonneg[10] = 0.0352589;     v2errkaonneg[10] = 0.00203679;
-v2protneg[10] = 0.0464441;     v2errprotneg[10] = 0.00258222;
+v2pionneg[10] = 0.033089;      v2errpionneg[10] = 0.00159797;
+v2kaonneg[10] = 0.0356833;     v2errkaonneg[10] = 0.00193603;
+v2protneg[10] = 0.0472947;     v2errprotneg[10] = 0.00244889;
 
-v2kaonneg[11] = 0.0331489;     v2errkaonneg[11] = 0.00440734;
-v2protneg[11] = 0.0460766;     v2errprotneg[11] = 0.00596628;
+v2pionneg[11] = 0.0321075;     v2errpionneg[11] = 0.00251042;
+v2kaonneg[11] = 0.0337351;     v2errkaonneg[11] = 0.00439436;
+v2protneg[11] = 0.0442228;     v2errprotneg[11] = 0.00595987;
 
+v2pionneg[12] = 0.0321625;     v2errpionneg[12] = 0.00477656;
 v2kaonneg[12] = 0.0333368;     v2errkaonneg[12] = 0.00519813;
-v2protneg[12] = 0.0469274;     v2errprotneg[12] = 0.0065295;
+v2protneg[12] = 0.0430611;     v2errprotneg[12] = 0.00652144;
 
-v2pionneg[13] = 0.0336624;     v2errpionneg[13] = 0.00204244;
-v2kaonneg[13] = 0.065236;      v2errkaonneg[13] = 0.0159537;
-v2protneg[13] = 0.075951;      v2errprotneg[13] = 0.00600602;
+v2pionneg[13] = 0.0339533;     v2errpionneg[13] = 0.00438491;
+v2kaonneg[13] = 0.0356072;     v2errkaonneg[13] = 0.0162713;
+v2protneg[13] = 0.0412724;     v2errprotneg[13] = 0.0049791;
 
-v2kaonneg[14] = 0.0346352;     v2errkaonneg[14] = 0.00414226;
-v2protneg[14] = 0.0534996;     v2errprotneg[14] = 0.0085335;
+v2pionneg[14] = 0.0324945;     v2errpionneg[14] = 0.00467284;
+v2kaonneg[14] = 0.0342532;     v2errkaonneg[14] = 0.00725964;
+v2protneg[14] = 0.043748;    v2errprotneg[14] = 0.00591164;
 
 float pt;
 
