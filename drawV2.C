@@ -32,54 +32,113 @@ void drawV2()
   //float v2errkaon[15] = {0.088231813 , 0.00333713 , 0.00334462, 0.00467125,0.00459631, 0.00674828,0.00713508, 0.00685736, 0.0085217 , 0.0073558 , 0.0104899 , 0.0124554};
   //float v2errprot[15] = {0.091693447 , 0.0031351  , 0.00320363, 0.00524073,0.0044155 , 0.00663063,0.00951811, 0.00902409, 0.0108702 , 0.0113582 , 0.0158324 , 0.0173097};
   //float v2errallt[15] = {0.088978238 , 0.00111325, 0.00172712, 0.0024903, 0.00302129, 0.0053449, 0.00332785, 0.00142889, 0.00307024, 0.00686395, 0.00562647, 0.0109289};
+float v2rawt[15];
+float v2rawterr[15];
 
-  float v2rawt[12] = {0.054412765, 0.067165588, 0.080514672, 0.093017545, 0.101842096, 0.105409385, 0.100016631, 0.108548677, 0.119417338, 0.102892277, 0.148518644, 0.161019072};
-  initParams();
+ //v2rawt[0]=0.00971314;  v2rawterr[0]=7.76036e-005;
+ //v2rawt[1]=0.0135586;   v2rawterr[1]=0.000108036;
+ //v2rawt[2]=0.0163241;   v2rawterr[2]=0.000144734;
+ //v2rawt[3]=0.0177834;   v2rawterr[3]=0.000218834;
+ //v2rawt[4]=0.0189887;   v2rawterr[4]=0.000214709;
+ //v2rawt[5]=0.0193578;   v2rawterr[5]=0.00027336;
+ //v2rawt[6]=0.0184775;   v2rawterr[6]=0.000339552;
+ //v2rawt[7]=0.0180929;   v2rawterr[7]=0.00041138;
+ //v2rawt[8]=0.0174696;   v2rawterr[8]=0.000576515;
+ //v2rawt[9]=0.0164087;   v2rawterr[9]=0.000527471;
+ //v2rawt[10]=0.014387;   v2rawterr[10]=0.000605393;
+ //v2rawt[11]=0.01302;    v2rawterr[11]=0.000681781;
+ //v2rawt[12]=99999;    v2rawterr[12]=0.000681781;
+ //v2rawt[13]=99999;    v2rawterr[13]=0.000681781;
+ //v2rawt[14]=99999;    v2rawterr[14]=0.000681781;
+
+float v2allt[15];
+float v2allterr[15];
+
+v2allt[0] = 0.0129913;    v2allterr[0] = 0.000630539;
+v2allt[1] = 0.0148176;    v2allterr[1] = 0.00426477;
+v2allt[2] = 0.020368;     v2allterr[2] = 0.00130794;
+v2allt[3] = 0.0273147;    v2allterr[3] = 0.0007013;
+v2allt[4] = 0.0320949;    v2allterr[4] = 0.00128689;
+v2allt[5] = 0.0334418;    v2allterr[5] = 0.00190837;
+v2allt[6] = 0.0368089;    v2allterr[6] = 0.00161652;
+v2allt[7] = 0.0377298;    v2allterr[7] = 0.00333707;
+v2allt[8] = 0.0381662;    v2allterr[8] = 0.00352911;
+v2allt[9] = 0.0376176;    v2allterr[9] = 0.00289812;
+v2allt[10] = 0.0369319;   v2allterr[10] = 0.00290598;
+v2allt[11] = 0.0361587;   v2allterr[11] = 0.00234554;
+v2allt[12] = 0.035877;    v2allterr[12] = 0.00307623;
+v2allt[13] = 0.0386827;   v2allterr[13] = 0.00301108;
+v2allt[14] = 0.0331255;   v2allterr[14] = 0.0111428;
+
+float v2toftrk[15];
+float v2toftrkerr[15];
+
+v2toftrk[0] = 0.0129107;    v2toftrkerr[0] = 0.000587957;
+v2toftrk[1] = 0.0162181;    v2toftrkerr[1] = 0.00111318;
+v2toftrk[2] = 0.0190345;    v2toftrkerr[2] = 0.00209936;
+v2toftrk[3] = 0.0220522;    v2toftrkerr[3] = 0.00295756;
+v2toftrk[4] = 0.0237921;    v2toftrkerr[4] = 0.00264428;
+v2toftrk[5] = 0.0267429;    v2toftrkerr[5] = 0.00241033;
+v2toftrk[6] = 0.0225069;    v2toftrkerr[6] = 0.00216444;
+v2toftrk[7] = 0.0233737;    v2toftrkerr[7] = 0.00542216;
+v2toftrk[8] = 0.0281891;    v2toftrkerr[8] = 0.00605935;
+v2toftrk[9] = 0.023038;     v2toftrkerr[9] = 0.00556458;
+v2toftrk[10] = 0.0292133;   v2toftrkerr[10] = 0.00507792;
+v2toftrk[11] = 0.0392957;   v2toftrkerr[11] = 0.003648;
+
+
+ initParams();
 
   for(int ipt=0;ipt<=14;ipt++) {
-    v2pionpos[ipt] = resCorr_r8dA(v2pionpos[ipt],1,0);
-    v2kaonpos[ipt] = resCorr_r8dA(v2kaonpos[ipt],1,0);
-    v2protpos[ipt] = resCorr_r8dA(v2protpos[ipt],1,0);
-    v2alltpos[ipt] = resCorr_r8dA(v2alltpos[ipt],1,0);
+    v2pionpos[ipt] = resCorr_r8dA(v2pionpos[ipt],1,0);     v2errpionpos[ipt] = resCorr_r8dA(v2errpionpos[ipt],1,0);
+    v2kaonpos[ipt] = resCorr_r8dA(v2kaonpos[ipt],1,0);     v2errkaonpos[ipt] = resCorr_r8dA(v2errkaonpos[ipt],1,0);
+    v2protpos[ipt] = resCorr_r8dA(v2protpos[ipt],1,0);     v2errprotpos[ipt] = resCorr_r8dA(v2errprotpos[ipt],1,0);
+    //v2alltpos[ipt] = resCorr_r8dA(v2alltpos[ipt],1,0);     v2erralltpos[ipt] = resCorr_r8dA(v2erralltpos[ipt],1,0);
+    
+    v2allt[ipt] = resCorr_r8dA(v2allt[ipt],1,0);     v2allterr[ipt] = resCorr_r8dA(v2allterr[ipt],1,0);
+    v2toftrk[ipt] = resCorr_r8dA(v2toftrk[ipt],1,0);     v2toftrkerr[ipt] = resCorr_r8dA(v2toftrkerr[ipt],1,0);
 
-    v2pionneg[ipt] = resCorr_r8dA(v2pionneg[ipt],1,0);
-    v2kaonneg[ipt] = resCorr_r8dA(v2kaonneg[ipt],1,0);
-    v2protneg[ipt] = resCorr_r8dA(v2protneg[ipt],1,0);
-    v2alltneg[ipt] = resCorr_r8dA(v2alltneg[ipt],1,0);
+    v2pionneg[ipt] = resCorr_r8dA(v2pionneg[ipt],1,0);     v2errpionneg[ipt] = resCorr_r8dA(v2errpionneg[ipt],1,0);
+    v2kaonneg[ipt] = resCorr_r8dA(v2kaonneg[ipt],1,0);     v2errkaonneg[ipt] = resCorr_r8dA(v2errkaonneg[ipt],1,0);
+    v2protneg[ipt] = resCorr_r8dA(v2protneg[ipt],1,0);     v2errprotneg[ipt] = resCorr_r8dA(v2errprotneg[ipt],1,0);
+    //v2alltneg[ipt] = resCorr_r8dA(v2alltneg[ipt],1,0);     v2erralltneg[ipt] = resCorr_r8dA(v2erralltneg[ipt],1,0);
   }
 
 
 
-float v2rawterr[12];
-v2rawterr[0]=7.76036e-005;
-v2rawterr[1]=0.000108036;
-v2rawterr[2]=0.000144733;
-v2rawterr[3]=0.000218838;
-v2rawterr[4]=0.000214715;
-v2rawterr[5]=0.000273343;
-v2rawterr[6]=0.000339524;
-v2rawterr[7]=0.000411411;
-v2rawterr[8]=0.000576471;
-v2rawterr[9]=0.000527435;
-v2rawterr[10]=0.000605382;
-v2rawterr[11]=0.000681793;
+
+//v2rawterr[0]=7.76036e-005;
+//v2rawterr[1]=0.000108036;
+//v2rawterr[2]=0.000144733;
+//v2rawterr[3]=0.000218838;
+//v2rawterr[4]=0.000214715;
+//v2rawterr[5]=0.000273343;
+//v2rawterr[6]=0.000339524;
+//v2rawterr[7]=0.000411411;
+//v2rawterr[8]=0.000576471;
+//v2rawterr[9]=0.000527435;
+//v2rawterr[10]=0.000605382;
+//v2rawterr[11]=0.000681793;
 
 
   TGraphErrors *gr_v2pionpos = new TGraphErrors(15,pt,v2pionpos,pterr,v2errpionpos);
   TGraphErrors *gr_v2kaonpos = new TGraphErrors(15,pt,v2kaonpos,pterr,v2errkaonpos);
   TGraphErrors *gr_v2protpos = new TGraphErrors(15,pt,v2protpos,pterr,v2errprotpos);
-  TGraphErrors *gr_v2alltpos = new TGraphErrors(12,pt,v2alltpos,pterr,v2erralltpos);
+  //TGraphErrors *gr_v2alltpos = new TGraphErrors(12,pt,v2alltpos,pterr,v2erralltpos);
 
   TGraphErrors *gr_v2pionneg = new TGraphErrors(15,pt,v2pionneg,pterr,v2errpionneg);
   TGraphErrors *gr_v2kaonneg = new TGraphErrors(15,pt,v2kaonneg,pterr,v2errkaonneg);
   TGraphErrors *gr_v2protneg = new TGraphErrors(15,pt,v2protneg,pterr,v2errprotneg);
-  TGraphErrors *gr_v2alltneg = new TGraphErrors(12,pt,v2alltneg,pterr,v2erralltneg);
+  //TGraphErrors *gr_v2alltneg = new TGraphErrors(12,pt,v2alltneg,pterr,v2erralltneg);
+  
+  TGraphErrors *gr_v2allt = new TGraphErrors(15,pt,v2allt,pterr,v2allterr);
+  TGraphErrors *gr_v2toftrk = new TGraphErrors(15,pt,v2toftrk,pterr,v2toftrkerr);
 
-  TGraphErrors *gr_v2rawt = new TGraphErrors(12,pt,v2rawt,pterr,v2rawterr);
+  //TGraphErrors *gr_v2rawt = new TGraphErrors(12,pt,v2rawt,pterr,v2rawterr);
 
   c1 = new TCanvas("c1","c1",3000,2000);
   c1->cd();
-  drawFrame(0,0,5,0.3,"Transverse Momentum (GeV/c)","elliptic flow (v_{2})");
+  drawFrame(0,0,5,0.26,"Transverse Momentum (GeV/c)","elliptic flow (v_{2})");
   //drawTitle(.1,-.07,"Identified Particle Elliptic Flow (v_{2}), TOF.W + ACC",1,12,.03,0);
   drawTitle(.1,-.07,"Charged Track Elliptic Flow (v_{2})",1,12,.03,0);
   //gr_v2pion->RemovePoint(13);
@@ -96,12 +155,16 @@ v2rawterr[11]=0.000681793;
   gr_v2pionpos->SetMarkerSize(3.2); gr_v2pionpos->SetMarkerColor(pioncolor);  gr_v2pionpos->SetLineColor(pioncolor); gr_v2pionpos->SetMarkerStyle(20); 
   gr_v2kaonpos->SetMarkerSize(3.2); gr_v2kaonpos->SetMarkerColor(kaoncolor);  gr_v2kaonpos->SetLineColor(kaoncolor); gr_v2kaonpos->SetMarkerStyle(20); 
   gr_v2protpos->SetMarkerSize(3.2); gr_v2protpos->SetMarkerColor(protcolor);  gr_v2protpos->SetLineColor(protcolor); gr_v2protpos->SetMarkerStyle(20); 
+  //gr_v2alltpos->SetMarkerSize(2.1); gr_v2alltpos->SetMarkerColor(6);  gr_v2alltpos->SetLineColor(6); gr_v2alltpos->SetMarkerStyle(29); 
   
   gr_v2pionneg->SetMarkerSize(3.8); gr_v2pionneg->SetMarkerColor(kGreen-9);  gr_v2pionneg->SetLineColor(pioncolor); gr_v2pionneg->SetMarkerStyle(22); 
   gr_v2kaonneg->SetMarkerSize(3.8); gr_v2kaonneg->SetMarkerColor(kBlue-9);   gr_v2kaonneg->SetLineColor(kaoncolor); gr_v2kaonneg->SetMarkerStyle(22); 
   gr_v2protneg->SetMarkerSize(3.8); gr_v2protneg->SetMarkerColor(kRed-9);    gr_v2protneg->SetLineColor(protcolor); gr_v2protneg->SetMarkerStyle(22); 
-  //gr_v2allt->SetMarkerSize(2.1); gr_v2allt->SetMarkerColor(6);  gr_v2allt->SetLineColor(6); gr_v2allt->SetMarkerStyle(29); 
-  //gr_v2rawt->SetMarkerSize(2); gr_v2rawt->SetMarkerColor(1);  gr_v2rawt->SetLineWidth(2);  gr_v2rawt->SetLineColor(1); gr_v2rawt->SetMarkerStyle(22);  gr_v2rawt->Draw("P");
+  //gr_v2alltneg->SetMarkerSize(2.1); gr_v2alltneg->SetMarkerColor(6);  gr_v2alltneg->SetLineColor(6); gr_v2alltneg->SetMarkerStyle(29); 
+  gStyle->SetHatchesSpacing(.7);  gStyle->SetHatchesLineWidth(2);
+  //gr_v2rawt->SetMarkerSize(3.2); gr_v2rawt->SetMarkerColor(1);  gr_v2rawt->SetLineWidth(2);  gr_v2rawt->SetLineColor(1); gr_v2rawt->SetMarkerStyle(22);  gr_v2rawt->Draw("P");
+  gr_v2allt->SetFillColor(16);  gr_v2allt->SetFillStyle(3353);  gr_v2allt->SetMarkerSize(3.2); gr_v2allt->SetMarkerColor(1);  gr_v2allt->SetLineWidth(2);  gr_v2allt->SetLineColor(1); gr_v2allt->SetMarkerStyle(22);  gr_v2allt->Draw("3P ");
+  gr_v2toftrk->SetFillColor(16);  gr_v2toftrk->SetFillStyle(3353);  gr_v2toftrk->SetMarkerSize(3.2); gr_v2toftrk->SetMarkerColor(6);  gr_v2toftrk->SetLineWidth(2);  gr_v2toftrk->SetLineColor(6); gr_v2toftrk->SetMarkerStyle(24);  gr_v2toftrk->Draw("P");
 
   gr_v2pionneg->SetLineStyle(7); gr_v2pionneg->SetLineWidth(3);   gr_v2pionneg->Draw("P");
   gr_v2kaonneg->SetLineStyle(7); gr_v2kaonneg->SetLineWidth(3);   gr_v2kaonneg->Draw("P");
@@ -112,9 +175,10 @@ v2rawterr[11]=0.000681793;
   gr_v2protpos->SetLineStyle(7); gr_v2protpos->SetLineWidth(3);   gr_v2protpos->Draw("P");
 
 
-  //gr_v2allt->SetLineStyle(7); gr_v2allt->SetLineWidth(3);   //gr_v2allt->Draw("CP");
+  //gr_v2alltpos->SetLineStyle(7); gr_v2alltpos->SetLineWidth(3);   gr_v2alltpos->Draw("CP");
+  //gr_v2alltneg->SetLineStyle(7); gr_v2alltneg->SetLineWidth(3);   gr_v2alltneg->Draw("CP");
   
-  legend = new TLegend(0.2,0.9,0.6,0.8,0);
+  legend = new TLegend(0.1,0.89,0.7,0.79,0);
   legend->SetNColumns(3);   legend->SetBorderSize(0);
   legend->AddEntry(gr_v2pionpos,"#pi+","p");
   legend->AddEntry(gr_v2kaonpos,"K+","p");
@@ -122,7 +186,10 @@ v2rawterr[11]=0.000681793;
   legend->AddEntry(gr_v2pionneg,"#pi-","p");
   legend->AddEntry(gr_v2kaonneg,"K-","p");
   legend->AddEntry(gr_v2protneg,"P-","p");
-  //legend->AddEntry(gr_v2allt,"all ID tracks (sum of #pi+k+P)","p");
+  //legend->AddEntry(gr_v2alltpos,"all ID tracks (sum of #pi+k+P)","p");
+  //legend->AddEntry(gr_v2alltneg,"all ID tracks (sum of #pi+k+P)","p");
+  legend->AddEntry(gr_v2allt,"all ID tracks (sum of #pi+k+P)","pc");
+  legend->AddEntry(gr_v2toftrk,"all charged tracks in TOFW","p");
   //legend->AddEntry(gr_v2rawt,"all charged tracks","p");
   legend->Draw();
 
@@ -312,14 +379,52 @@ float pt;
 float resCorr_r8dA(float v2, int sysflag, int centbin)
 {
   //sysflag flags which detector is used for RP 
-  //1 - BBC
-  //2 - SMD
-  //3 - MPC
+// 0- BBC
+// 1- MPC
+// 2- RXNIN
+// 3- RXNOUT
+// 4- RXNCMB
 
-  sysflag = sysflag - 1;
+  //sysflag = sysflag + 1;
   float res[6][4];
   float resErr[6][4];
 
+  cout << sysflag << "\t" << centbin << endl;
+
+res[0][0] =   0.12821  ; resErr[0][0] =   0.00536457;
+res[1][0] =   0.239077 ; resErr[1][0] =   0.00537042;
+res[2][0] =   0.1425   ; resErr[2][0] =   0.00536553;
+res[3][0] =   0.0169146; resErr[3][0] =   0.00536335;
+res[4][0] =   0.0990726; resErr[4][0] =   0.00535798;
+      
+//centbin: 2    centbin: 2  
+res[0][1] =   0.193376 ; resErr[0][1] =   0.00538797;
+res[1][1] =   0.312562 ; resErr[1][1] =   0.00537477;
+res[2][1] =   0.0562682; resErr[2][1] =   0.00538001;
+res[3][1] =   0.100585 ; resErr[3][1] =   0.00538992;
+res[4][1] =   0.0863826; resErr[4][1] =   0.00538704;
+      
+//centbin: 3    centbin: 3  
+res[0][2] =   0.0752232; resErr[0][2] =   0.00538196;
+res[1][2] =   0.458582 ; resErr[1][2] =   0.0053765;
+res[2][2] =   0.175037 ; resErr[2][2] =   0.00538112;
+res[3][2] =   0.120356 ; resErr[3][2] =   0.00539901;
+res[4][2] =   0.121532 ; resErr[4][2] =   0.00539664;
+      
+//centbin: 4    centbin: 4  
+res[0][3] =   0.0875941 ; resErr[0][3] =   0.00538681;
+res[1][3] =   0.452428  ; resErr[1][3] =   0.00538587;
+res[2][3] =   0.109962  ; resErr[2][3] =   0.00538293;
+res[3][3] =   0.025718  ; resErr[3][3] =   0.00538809;
+res[4][3] =   0.0259343 ; resErr[4][3] =   0.00538723;
+
+
+  //res[1][0]=0.1134;  res[1][1]=0.0905;  res[1][2]=0.0664;  res[1][3]=0.0664;
+  //res[2][0]=0.1591;  res[2][1]=0.1104;  res[2][2]=0.1095;  res[2][3]=0.0979;
+  //res[3][0]=0.1250;  res[3][1]=0.0886;  res[3][2]=0.0985;  res[3][3]=0.0967;
+  //res[4][0]=0.0937;  res[4][1]=0.1012;  res[4][2]=0.0573;  res[4][3]=0.0572;
+  //res[5][0]=0.1282;  res[5][1]=0.1238;  res[5][2]=0.0991;  res[5][3]=0.0919;
+/*
   res[0][0] = 0.204441;     resErr[0][0] = 0.0819683;
   res[1][0] = 0.0019903;    resErr[1][0] = 0.00808764;
   res[2][0] = 0.273492;     resErr[2][0] = 0.0948057;
@@ -335,7 +440,8 @@ float resCorr_r8dA(float v2, int sysflag, int centbin)
   res[0][3] = 0.188814;     resErr[0][3] = 0.193319;
   res[1][3] = 0.000894145;  resErr[1][3] = 0.0133034;
   res[2][3] = 0.348711;     resErr[2][3] = 0.262719;
-
+*/
+  cout << v2 / res[sysflag][centbin] << endl;;
   return v2 / res[sysflag][centbin];
 
 }
