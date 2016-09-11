@@ -139,6 +139,7 @@ v2toftrk[11] = 0.0392957;   v2toftrkerr[11] = 0.003648;
   c1 = new TCanvas("c1","c1",3000,2000);
   c1->cd();
   drawFrame(0,0,5,0.26,"Transverse Momentum (GeV/c)","elliptic flow (v_{2})");
+  //axis->GetXaxis()->SetLineWidth(2);
   //drawTitle(.1,-.07,"Identified Particle Elliptic Flow (v_{2}), TOF.W + ACC",1,12,.03,0);
   drawTitle(.1,-.07,"Charged Track Elliptic Flow (v_{2})",1,12,.03,0);
   //gr_v2pion->RemovePoint(13);
@@ -164,7 +165,7 @@ v2toftrk[11] = 0.0392957;   v2toftrkerr[11] = 0.003648;
   gStyle->SetHatchesSpacing(.7);  gStyle->SetHatchesLineWidth(2);
   //gr_v2rawt->SetMarkerSize(3.2); gr_v2rawt->SetMarkerColor(1);  gr_v2rawt->SetLineWidth(2);  gr_v2rawt->SetLineColor(1); gr_v2rawt->SetMarkerStyle(22);  gr_v2rawt->Draw("P");
   gr_v2allt->SetFillColor(16);  gr_v2allt->SetFillStyle(3353);  gr_v2allt->SetMarkerSize(3.2); gr_v2allt->SetMarkerColor(1);  gr_v2allt->SetLineWidth(2);  gr_v2allt->SetLineColor(1); gr_v2allt->SetMarkerStyle(22);  gr_v2allt->Draw("3P ");
-  gr_v2toftrk->SetFillColor(16);  gr_v2toftrk->SetFillStyle(3353);  gr_v2toftrk->SetMarkerSize(3.2); gr_v2toftrk->SetMarkerColor(6);  gr_v2toftrk->SetLineWidth(2);  gr_v2toftrk->SetLineColor(6); gr_v2toftrk->SetMarkerStyle(24);  gr_v2toftrk->Draw("P");
+  //gr_v2toftrk->SetFillColor(16);  gr_v2toftrk->SetFillStyle(3353);  gr_v2toftrk->SetMarkerSize(3.2); gr_v2toftrk->SetMarkerColor(6);  gr_v2toftrk->SetLineWidth(2);  gr_v2toftrk->SetLineColor(6); gr_v2toftrk->SetMarkerStyle(24);  gr_v2toftrk->Draw("P");
 
   gr_v2pionneg->SetLineStyle(7); gr_v2pionneg->SetLineWidth(3);   gr_v2pionneg->Draw("P");
   gr_v2kaonneg->SetLineStyle(7); gr_v2kaonneg->SetLineWidth(3);   gr_v2kaonneg->Draw("P");
@@ -177,8 +178,8 @@ v2toftrk[11] = 0.0392957;   v2toftrkerr[11] = 0.003648;
 
   //gr_v2alltpos->SetLineStyle(7); gr_v2alltpos->SetLineWidth(3);   gr_v2alltpos->Draw("CP");
   //gr_v2alltneg->SetLineStyle(7); gr_v2alltneg->SetLineWidth(3);   gr_v2alltneg->Draw("CP");
-  
-  legend = new TLegend(0.1,0.89,0.7,0.79,0);
+  gPad->SetTicks();
+  legend = new TLegend(0.15,0.88,0.7,0.79,0);
   legend->SetNColumns(3);   legend->SetBorderSize(0);
   legend->AddEntry(gr_v2pionpos,"#pi+","p");
   legend->AddEntry(gr_v2kaonpos,"K+","p");
@@ -189,7 +190,7 @@ v2toftrk[11] = 0.0392957;   v2toftrkerr[11] = 0.003648;
   //legend->AddEntry(gr_v2alltpos,"all ID tracks (sum of #pi+k+P)","p");
   //legend->AddEntry(gr_v2alltneg,"all ID tracks (sum of #pi+k+P)","p");
   legend->AddEntry(gr_v2allt,"all ID tracks (sum of #pi+k+P)","pc");
-  legend->AddEntry(gr_v2toftrk,"all charged tracks in TOFW","p");
+  //legend->AddEntry(gr_v2toftrk,"all charged tracks in TOFW","p");
   //legend->AddEntry(gr_v2rawt,"all charged tracks","p");
   legend->Draw();
 
@@ -344,9 +345,6 @@ v2protneg[13] = 0.0412724;     v2errprotneg[13] = 0.0049791;
 v2pionneg[14] = 0.0324945;     v2errpionneg[14] = 0.00467284;
 v2kaonneg[14] = 0.0342532;     v2errkaonneg[14] = 0.00725964;
 v2protneg[14] = 0.043748;    v2errprotneg[14] = 0.00591164;
-
-float pt;
-
 
   //pt bin reference
 //ptbin ptlow pthigh

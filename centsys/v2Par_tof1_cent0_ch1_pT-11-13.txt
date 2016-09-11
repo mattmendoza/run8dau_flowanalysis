@@ -1,0 +1,37 @@
+PIONS  | 	 idphi: 	0	 mean:	0.0117462	 mean err:	0.00013367	 width:	0.0280273	 width err: 	0.000128938	 yield:	56032	 yield err:	2.43496
+KAONS  | 	 idphi: 	0	 mean:	0.234925	 mean err:	0.000621718	 width:	0.0346082	 width err: 	0.000690629	 yield:	12209.3	 yield err:	1.89049
+PROTONS| 	 idphi: 	0	 mean:	0.866569	 mean err:	0.000449217	 width:	0.048	 width err: 	2.02435e-005	 yield:	17030	 yield err:	1.3531
+
+ALL ID TRACKS| 	 idphi: 	0	 yield:	85271.4	 yield err:	3.36658
+PIONS  | 	 idphi: 	1	 mean:	0.012557	 mean err:	0.000139847	 width:	0.0301881	 width err: 	0	 yield:	54729.2	 yield err:	2.40644
+KAONS  | 	 idphi: 	1	 mean:	0.234336	 mean err:	0.000641721	 width:	0.0345532	 width err: 	0.00068252	 yield:	12029.5	 yield err:	1.90234
+PROTONS| 	 idphi: 	1	 mean:	0.867922	 mean err:	0.000458586	 width:	0.0504	 width err: 	4.36987e-005	 yield:	16683.3	 yield err:	1.36687
+
+ALL ID TRACKS| 	 idphi: 	1	 yield:	83442	 yield err:	3.3583
+PIONS  | 	 idphi: 	2	 mean:	0.0121461	 mean err:	0.000139627	 width:	0.0300658	 width err: 	0	 yield:	53850.3	 yield err:	2.38427
+KAONS  | 	 idphi: 	2	 mean:	0.233896	 mean err:	0.000707278	 width:	0.0360544	 width err: 	0.000770967	 yield:	11489.6	 yield err:	2.05815
+PROTONS| 	 idphi: 	2	 mean:	0.868215	 mean err:	0.000477444	 width:	0.0504	 width err: 	3.40906e-005	 yield:	16048.4	 yield err:	1.33759
+
+ALL ID TRACKS| 	 idphi: 	2	 yield:	81388.3	 yield err:	3.42197
+PIONS  | 	 idphi: 	3	 mean:	0.0121769	 mean err:	0.00014212	 width:	0.0303425	 width err: 	0	 yield:	53994.9	 yield err:	2.38501
+KAONS  | 	 idphi: 	3	 mean:	0.234681	 mean err:	0.000632813	 width:	0.0342491	 width err: 	0.000686448	 yield:	11394.7	 yield err:	1.80191
+PROTONS| 	 idphi: 	3	 mean:	0.868037	 mean err:	0.000464213	 width:	0.0504	 width err: 	4.46028e-005	 yield:	16389.7	 yield err:	1.35142
+
+ALL ID TRACKS| 	 idphi: 	3	 yield:	81779.3	 yield err:	3.28048
+PIONS  | 	 idphi: 	4	 mean:	0.0122122	 mean err:	0.00014081	 width:	0.030301	 width err: 	0	 yield:	55680.5	 yield err:	2.40535
+KAONS  | 	 idphi: 	4	 mean:	0.235225	 mean err:	0.000599697	 width:	0.0337504	 width err: 	0.00063299	 yield:	12029.3	 yield err:	1.752
+PROTONS| 	 idphi: 	4	 mean:	0.86745	 mean err:	0.00046462	 width:	0.0504	 width err: 	3.86634e-005	 yield:	16508.8	 yield err:	1.35503
+
+ALL ID TRACKS| 	 idphi: 	4	 yield:	84218.6	 yield err:	3.26976
+PIONS  | 	 idphi: 	5	 mean:	0.0118682	 mean err:	0.000138827	 width:	0.0302611	 width err: 	0	 yield:	56838.7	 yield err:	2.42654
+KAONS  | 	 idphi: 	5	 mean:	0.234781	 mean err:	0.000634958	 width:	0.0347436	 width err: 	0.000696494	 yield:	12444.9	 yield err:	1.9147
+PROTONS| 	 idphi: 	5	 mean:	0.867577	 mean err:	0.000454871	 width:	0.0504	 width err: 	4.29534e-005	 yield:	17004.9	 yield err:	1.3754
+
+ALL ID TRACKS| 	 idphi: 	5	 yield:	86288.5	 yield err:	3.38318
+
+
+
+v2alltpos[3] = 0.0286803; 		 v2erralltpos[3] = 0.538109;
+v2pionpos[3] = 0.026306; 		 v2errpionpos[3] = 2.51847e-005;
+v2kaonpos[3] = 0.0430063; 		 v2errkaonpos[3] = 9.24605e-005;
+v2protpos[3] = 0.027813;		 v2errprotpos[3] = 4.70711e-005;

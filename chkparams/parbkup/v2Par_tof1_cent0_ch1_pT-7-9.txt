@@ -31,10 +31,262 @@ ALL ID TRACKS| 	 idphi: 	5	 yield:	250739	 yield err:	5.00153
 
 
 
-v2alltpos[1] = 0.014424; 		 v2erralltpos[1] = 1.10428e-005;
-v2pionpos[1] = 0.0151749; 		 v2errpionpos[1] = 1.26266e-005;
-v2kaonpos[1] = 0.013755; 		 v2errkaonpos[1] = 4.1153e-005;
-v2protpos[1] = 0.010197;		 v2errprotpos[1] = 4.12966e-005;
+v2alltpos[0] = 0.014424; 		 v2erralltpos[0] = 1.10428e-005;
+v2pionpos[0] = 0.0151749; 		 v2errpionpos[0] = 1.26266e-005;
+v2kaonpos[0] = 0.013755; 		 v2errkaonpos[0] = 4.1153e-005;
+v2protpos[0] = 0.010197;		 v2errprotpos[0] = 4.12966e-005;
+
+
+
+float ptrange[2] = {0.7,0.9};
+int    Nrebin            = 1;
+int    kUseLogLowBins    = 1;
+int    twogausfit        = 0;
+int    threegausfit      = 0;
+float  protmeanvariance  = 0.05;
+float  protwidthvariance = 0.05;
+float  pionmeanrange[2]  = {-0.1,0.05};
+float  kaonmeanrange[2]  = {0.15,0.35};
+float  protmeanrange[2]  = {0.7,0.9};
+float  pionwidthrange[2] = {0.001,0.08};
+float  kaonwidthrange[2] = {0.01,0.1};
+float  protwidthrange[2] = {0.001,0.048};
+float  pionfitrange[2]   = {-0.1,0.1};
+float  kaonfitrange[2]   = {0.2,0.3};
+float  protfitrange[2]   = {0.7,0.95};
+float tunepionheight[6] = {1.12,1.1,1.1,1.1,1.1,1.1};
+float tunepionwidth[6]  = {1.03,0.93,0.95,0.95,0.95,0.95};
+float tunepionmean[6]   = {0,0,0,0,0,0};
+float tunekaonheight[6] = {1,0.99,1.01,1,1,0.99};
+float tunekaonwidth[6]  = {0.84,0.84,0.84,0.84,0.84,0.84};
+float tunekaonmean[6]   = {0,0,0,0,0,0};
+float tuneprotheight[6] = {0.92,0.93,0.94,0.92,0.93,0.93};
+float tuneprotwidth[6]  = {0.8,0.8,0.8,0.8,0.8,0.79};
+float tuneprotmean[6]   = {0,0,0,0,0,0};
+
+
+
+float ptrange[2] = {0.7,0.9};
+int    Nrebin            = 1;
+int    kUseLogLowBins    = 1;
+int    twogausfit        = 0;
+int    threegausfit      = 0;
+float  protmeanvariance  = 0.05;
+float  protwidthvariance = 0.05;
+float  pionmeanrange[2]  = {-0.1,0.05};
+float  kaonmeanrange[2]  = {0.15,0.35};
+float  protmeanrange[2]  = {0.7,0.9};
+float  pionwidthrange[2] = {0.001,0.08};
+float  kaonwidthrange[2] = {0.01,0.1};
+float  protwidthrange[2] = {0.001,0.048};
+float  pionfitrange[2]   = {-0.1,0.1};
+float  kaonfitrange[2]   = {0.2,0.3};
+float  protfitrange[2]   = {0.7,0.95};
+float tunepionheight[6] = {1.12,1.1,1.1,1.1,1.1,1.1};
+float tunepionwidth[6]  = {1.03,0.93,0.95,0.95,0.95,0.95};
+float tunepionmean[6]   = {0,0,0,0,0,0};
+float tunekaonheight[6] = {1,0.99,1.01,1,1,0.99};
+float tunekaonwidth[6]  = {0.84,0.84,0.84,0.84,0.84,0.84};
+float tunekaonmean[6]   = {0,0,0,0,0,0};
+float tuneprotheight[6] = {0.92,0.93,0.94,0.92,0.93,0.93};
+float tuneprotwidth[6]  = {0.8,0.8,0.8,0.8,0.8,0.79};
+float tuneprotmean[6]   = {0,0,0,0,0,0};
+
+
+
+float ptrange[2] = {0.7,0.9};
+int    Nrebin            = 1;
+int    kUseLogLowBins    = 1;
+int    twogausfit        = 0;
+int    threegausfit      = 0;
+float  protmeanvariance  = 0.05;
+float  protwidthvariance = 0.05;
+float  pionmeanrange[2]  = {-0.1,0.05};
+float  kaonmeanrange[2]  = {0.15,0.35};
+float  protmeanrange[2]  = {0.7,0.9};
+float  pionwidthrange[2] = {0.001,0.08};
+float  kaonwidthrange[2] = {0.01,0.1};
+float  protwidthrange[2] = {0.001,0.048};
+float  pionfitrange[2]   = {-0.1,0.1};
+float  kaonfitrange[2]   = {0.2,0.3};
+float  protfitrange[2]   = {0.7,0.95};
+float tunepionheight[6] = {1.12,1.1,1.1,1.1,1.1,1.1};
+float tunepionwidth[6]  = {1.03,0.93,0.95,0.95,0.95,0.95};
+float tunepionmean[6]   = {0,0,0,0,0,0};
+float tunekaonheight[6] = {1,0.99,1.01,1,1,0.99};
+float tunekaonwidth[6]  = {0.84,0.84,0.84,0.84,0.84,0.84};
+float tunekaonmean[6]   = {0,0,0,0,0,0};
+float tuneprotheight[6] = {0.92,0.93,0.94,0.92,0.93,0.93};
+float tuneprotwidth[6]  = {0.8,0.8,0.8,0.8,0.8,0.79};
+float tuneprotmean[6]   = {0,0,0,0,0,0};
+
+
+
+float ptrange[2] = {0.7,0.9};
+int    Nrebin            = 1;
+int    kUseLogLowBins    = 1;
+int    twogausfit        = 0;
+int    threegausfit      = 0;
+float  protmeanvariance  = 0.05;
+float  protwidthvariance = 0.05;
+float  pionmeanrange[2]  = {-0.1,0.05};
+float  kaonmeanrange[2]  = {0.15,0.35};
+float  protmeanrange[2]  = {0.7,0.9};
+float  pionwidthrange[2] = {0.001,0.08};
+float  kaonwidthrange[2] = {0.01,0.1};
+float  protwidthrange[2] = {0.001,0.048};
+float  pionfitrange[2]   = {-0.1,0.1};
+float  kaonfitrange[2]   = {0.2,0.3};
+float  protfitrange[2]   = {0.7,0.95};
+float tunepionheight[6] = {1.12,1.1,1.1,1.1,1.1,1.1};
+float tunepionwidth[6]  = {1.03,0.93,0.95,0.95,0.95,0.95};
+float tunepionmean[6]   = {0,0,0,0,0,0};
+float tunekaonheight[6] = {1,0.99,1.01,1,1,0.99};
+float tunekaonwidth[6]  = {0.84,0.84,0.84,0.84,0.84,0.84};
+float tunekaonmean[6]   = {0,0,0,0,0,0};
+float tuneprotheight[6] = {0.92,0.93,0.94,0.92,0.93,0.93};
+float tuneprotwidth[6]  = {0.8,0.8,0.8,0.8,0.8,0.79};
+float tuneprotmean[6]   = {0,0,0,0,0,0};
+
+
+
+float ptrange[2] = {0.7,0.9};
+int    Nrebin            = 1;
+int    kUseLogLowBins    = 1;
+int    twogausfit        = 0;
+int    threegausfit      = 0;
+float  protmeanvariance  = 0.05;
+float  protwidthvariance = 0.05;
+float  pionmeanrange[2]  = {-0.1,0.05};
+float  kaonmeanrange[2]  = {0.15,0.35};
+float  protmeanrange[2]  = {0.7,0.9};
+float  pionwidthrange[2] = {0.001,0.08};
+float  kaonwidthrange[2] = {0.01,0.1};
+float  protwidthrange[2] = {0.001,0.048};
+float  pionfitrange[2]   = {-0.1,0.1};
+float  kaonfitrange[2]   = {0.2,0.3};
+float  protfitrange[2]   = {0.7,0.95};
+float tunepionheight[6] = {1.12,1.1,1.1,1.1,1.1,1.1};
+float tunepionwidth[6]  = {1.03,0.93,0.95,0.95,0.95,0.95};
+float tunepionmean[6]   = {0,0,0,0,0,0};
+float tunekaonheight[6] = {1,0.99,1.01,1,1,0.99};
+float tunekaonwidth[6]  = {0.84,0.84,0.84,0.84,0.84,0.84};
+float tunekaonmean[6]   = {0,0,0,0,0,0};
+float tuneprotheight[6] = {0.92,0.93,0.94,0.92,0.93,0.93};
+float tuneprotwidth[6]  = {0.8,0.8,0.8,0.8,0.8,0.79};
+float tuneprotmean[6]   = {0,0,0,0,0,0};
+
+
+
+float ptrange[2] = {0.7,0.9};
+int    Nrebin            = 1;
+int    kUseLogLowBins    = 1;
+int    twogausfit        = 0;
+int    threegausfit      = 0;
+float  protmeanvariance  = 0.05;
+float  protwidthvariance = 0.05;
+float  pionmeanrange[2]  = {-0.1,0.05};
+float  kaonmeanrange[2]  = {0.15,0.35};
+float  protmeanrange[2]  = {0.7,0.9};
+float  pionwidthrange[2] = {0.001,0.08};
+float  kaonwidthrange[2] = {0.01,0.1};
+float  protwidthrange[2] = {0.001,0.048};
+float  pionfitrange[2]   = {-0.1,0.1};
+float  kaonfitrange[2]   = {0.2,0.3};
+float  protfitrange[2]   = {0.7,0.95};
+float tunepionheight[6] = {1.12,1.1,1.1,1.1,1.1,1.1};
+float tunepionwidth[6]  = {1.03,0.93,0.95,0.95,0.95,0.95};
+float tunepionmean[6]   = {0,0,0,0,0,0};
+float tunekaonheight[6] = {1,0.99,1.01,1,1,0.99};
+float tunekaonwidth[6]  = {0.84,0.84,0.84,0.84,0.84,0.84};
+float tunekaonmean[6]   = {0,0,0,0,0,0};
+float tuneprotheight[6] = {0.92,0.93,0.94,0.92,0.93,0.93};
+float tuneprotwidth[6]  = {0.8,0.8,0.8,0.8,0.8,0.79};
+float tuneprotmean[6]   = {0,0,0,0,0,0};
+
+
+
+float ptrange[2] = {0.7,0.9};
+int    Nrebin            = 1;
+int    kUseLogLowBins    = 1;
+int    twogausfit        = 0;
+int    threegausfit      = 0;
+float  protmeanvariance  = 0.05;
+float  protwidthvariance = 0.05;
+float  pionmeanrange[2]  = {-0.1,0.05};
+float  kaonmeanrange[2]  = {0.15,0.35};
+float  protmeanrange[2]  = {0.7,0.9};
+float  pionwidthrange[2] = {0.001,0.08};
+float  kaonwidthrange[2] = {0.01,0.1};
+float  protwidthrange[2] = {0.001,0.048};
+float  pionfitrange[2]   = {-0.1,0.1};
+float  kaonfitrange[2]   = {0.2,0.3};
+float  protfitrange[2]   = {0.7,0.95};
+float tunepionheight[6] = {1.12,1.1,1.1,1.1,1.1,1.1};
+float tunepionwidth[6]  = {1.03,0.93,0.95,0.95,0.95,0.95};
+float tunepionmean[6]   = {0,0,0,0,0,0};
+float tunekaonheight[6] = {1,0.99,1.01,1,1,0.99};
+float tunekaonwidth[6]  = {0.84,0.84,0.84,0.84,0.84,0.84};
+float tunekaonmean[6]   = {0,0,0,0,0,0};
+float tuneprotheight[6] = {0.92,0.93,0.94,0.92,0.93,0.93};
+float tuneprotwidth[6]  = {0.8,0.8,0.8,0.8,0.8,0.79};
+float tuneprotmean[6]   = {0,0,0,0,0,0};
+
+
+
+float ptrange[2] = {0.7,0.9};
+int    Nrebin            = 1;
+int    kUseLogLowBins    = 1;
+int    twogausfit        = 0;
+int    threegausfit      = 0;
+float  protmeanvariance  = 0.05;
+float  protwidthvariance = 0.05;
+float  pionmeanrange[2]  = {-0.1,0.05};
+float  kaonmeanrange[2]  = {0.15,0.35};
+float  protmeanrange[2]  = {0.7,0.9};
+float  pionwidthrange[2] = {0.001,0.08};
+float  kaonwidthrange[2] = {0.01,0.1};
+float  protwidthrange[2] = {0.001,0.048};
+float  pionfitrange[2]   = {-0.1,0.1};
+float  kaonfitrange[2]   = {0.2,0.3};
+float  protfitrange[2]   = {0.7,0.95};
+float tunepionheight[6] = {1.12,1.1,1.1,1.1,1.1,1.1};
+float tunepionwidth[6]  = {1.03,0.93,0.95,0.95,0.95,0.95};
+float tunepionmean[6]   = {0,0,0,0,0,0};
+float tunekaonheight[6] = {1,0.99,1.01,1,1,0.99};
+float tunekaonwidth[6]  = {0.84,0.84,0.84,0.84,0.84,0.84};
+float tunekaonmean[6]   = {0,0,0,0,0,0};
+float tuneprotheight[6] = {0.92,0.93,0.94,0.92,0.93,0.93};
+float tuneprotwidth[6]  = {0.8,0.8,0.8,0.8,0.8,0.79};
+float tuneprotmean[6]   = {0,0,0,0,0,0};
+
+
+
+float ptrange[2] = {0.7,0.9};
+int    Nrebin            = 1;
+int    kUseLogLowBins    = 1;
+int    twogausfit        = 0;
+int    threegausfit      = 0;
+float  protmeanvariance  = 0.05;
+float  protwidthvariance = 0.05;
+float  pionmeanrange[2]  = {-0.1,0.05};
+float  kaonmeanrange[2]  = {0.15,0.35};
+float  protmeanrange[2]  = {0.7,0.9};
+float  pionwidthrange[2] = {0.001,0.08};
+float  kaonwidthrange[2] = {0.01,0.1};
+float  protwidthrange[2] = {0.001,0.048};
+float  pionfitrange[2]   = {-0.1,0.1};
+float  kaonfitrange[2]   = {0.2,0.3};
+float  protfitrange[2]   = {0.7,0.95};
+float tunepionheight[6] = {1.12,1.1,1.1,1.1,1.1,1.1};
+float tunepionwidth[6]  = {1.03,0.93,0.95,0.95,0.95,0.95};
+float tunepionmean[6]   = {0,0,0,0,0,0};
+float tunekaonheight[6] = {1,0.99,1.01,1,1,0.99};
+float tunekaonwidth[6]  = {0.84,0.84,0.84,0.84,0.84,0.84};
+float tunekaonmean[6]   = {0,0,0,0,0,0};
+float tuneprotheight[6] = {0.92,0.93,0.94,0.92,0.93,0.93};
+float tuneprotwidth[6]  = {0.8,0.8,0.8,0.8,0.8,0.79};
+float tuneprotmean[6]   = {0,0,0,0,0,0};
 
 
 

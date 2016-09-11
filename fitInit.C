@@ -71,7 +71,8 @@ float combindedfitrange[2] = {-0.4,0.6};
 
 int itof    = 1; //{"tofe","tofw","tofw+acc"}
 int icent   = 0;
-int ich   = 0;
+//int ich   = 0;
+//int ptbin = 6;
 
 float pionheightpercent;
 float kaonheightpercent;
@@ -112,7 +113,6 @@ int setTuning;
 //20    4.5   4.7
 //21    4.7   4.9
 //22    4.9   5.1
-  int ptbin = 6;
 
 //manually override final fit params by visual
 

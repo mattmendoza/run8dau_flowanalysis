@@ -1,10 +1,12 @@
 #include "math.h"
 #include "Style.h"
 #include "Run8dA_pidEP.C"
+#include "TRandom2.h"
 
 
 float v2allt[15];
 float v2allterr[15];
+float percentdB[15];
 
 int ipt=0;
 
@@ -16,12 +18,36 @@ TF1 *v2fit = new TF1("v2fit","[1]*(1+[0]*cos(2*x))",0,M_PI);
 //ofstream parout("alltrackflow.dat");
 //TGraphErrors *yieldvsdphi;
 //TF1 *v2fit = new TF1("v2fit","[1]*(1+[0]*cos(2*x))",0,M_PI);
+
+
 void wigglErrv2()
 {
+  ofstream systFile("wigglErrOUT.txt");
 
-  int whichPhi = 2;
-  float sysPercent = 2;
-  string plusminus = "plus";
+  for(int whichPhi=0;whichPhi<=5;whichPhi++) {
+    wiggitout(whichPhi,1,"plus"); 
+    wiggitout(whichPhi,2,"plus"); 
+    wiggitout(whichPhi,4,"plus"); 
+    wiggitout(whichPhi,5,"plus"); 
+    wiggitout(whichPhi,7,"plus"); 
+    wiggitout(whichPhi,10,"plus"); 
+
+    wiggitout(whichPhi,1,"minus"); 
+    wiggitout(whichPhi,2,"minus"); 
+    wiggitout(whichPhi,4,"minus"); 
+    wiggitout(whichPhi,5,"minus"); 
+    wiggitout(whichPhi,7,"minus"); 
+    wiggitout(whichPhi,10,"minus"); 
+  }
+}
+
+void wiggitout(int whichPhi, float sysPercent, string plusminus)
+{
+
+  //int whichPhi = 2;
+  //float sysPercent = 7;
+  //string plusminus = "minus";
+  int Ntimes = 1000;
 
   float dphi[6];
   for(int idphi=0 ; idphi<=5 ; idphi++) {
@@ -45,7 +71,6 @@ void wigglErrv2()
   float allTrkYield3540[6] = {1602.69 ,1555.569,1492.359,1513.497,1555.067  ,1611.553};
   float allTrkYield4045[6] = {1317.69 ,1299.588,1222.193,1271.106,1251.564  ,1322.579};
   
-  
   allTrkYield0507[whichPhi] = wiggleize(allTrkYield0507[whichPhi],sysPercent,plusminus);
   allTrkYield0709[whichPhi] = wiggleize(allTrkYield0709[whichPhi],sysPercent,plusminus);
   allTrkYield0911[whichPhi] = wiggleize(allTrkYield0911[whichPhi],sysPercent,plusminus);
@@ -63,51 +88,76 @@ void wigglErrv2()
   allTrkYield4045[whichPhi] = wiggleize(allTrkYield4045[whichPhi],sysPercent,plusminus);
 
 
-  cmain = new TCanvas("cmain","cmain",3000,5000);
+  //allTrkYield0507[whichPhi] = anaWiggles(allTrkYield0507[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield0709[whichPhi] = anaWiggles(allTrkYield0709[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield0911[whichPhi] = anaWiggles(allTrkYield0911[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield1113[whichPhi] = anaWiggles(allTrkYield1113[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield1315[whichPhi] = anaWiggles(allTrkYield1315[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield1517[whichPhi] = anaWiggles(allTrkYield1517[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield1719[whichPhi] = anaWiggles(allTrkYield1719[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield1921[whichPhi] = anaWiggles(allTrkYield1921[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield2123[whichPhi] = anaWiggles(allTrkYield2123[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield2325[whichPhi] = anaWiggles(allTrkYield2325[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield2527[whichPhi] = anaWiggles(allTrkYield2527[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield2729[whichPhi] = anaWiggles(allTrkYield2729[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield3035[whichPhi] = anaWiggles(allTrkYield3035[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield3540[whichPhi] = anaWiggles(allTrkYield3540[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
+  //allTrkYield4045[whichPhi] = anaWiggles(allTrkYield4045[whichPhi],sysPercent,plusminus,whichPhi,Ntimes);
 
-  cmain->Divide(3,5);
-  cmain->Draw();
+
+  cmain = new TCanvas("cmain","cmain",3000,5000);
+  //cmain->Divide(3,5);
+  //cmain->Draw();
   canvasflowfit = new TCanvas ("canvasflowfit","canvasflowfit",800,800);
   //parout << "SumOfAllTRACKS!!!" << endl;
 
-  TCanvas *c0  =  plot4flowfit(dphi,allTrkYield0507,0.5,0.7)->Clone();
-  TCanvas *c1  =  plot4flowfit(dphi,allTrkYield0709,0.7,0.9)->Clone();
-  TCanvas *c2  =  plot4flowfit(dphi,allTrkYield0911,0.9,1.1)->Clone();
-  TCanvas *c3  =  plot4flowfit(dphi,allTrkYield1113,1.1,1.3)->Clone();
-  TCanvas *c4  =  plot4flowfit(dphi,allTrkYield1315,1.3,1.5)->Clone();
-  TCanvas *c5  =  plot4flowfit(dphi,allTrkYield1517,1.5,1.7)->Clone();
-  TCanvas *c6  =  plot4flowfit(dphi,allTrkYield1719,1.7,1.9)->Clone();
-  TCanvas *c7  =  plot4flowfit(dphi,allTrkYield1921,1.9,2.1)->Clone();
-  TCanvas *c8  =  plot4flowfit(dphi,allTrkYield2123,2.1,2.3)->Clone();
-  TCanvas *c9  =  plot4flowfit(dphi,allTrkYield2325,2.3,2.5)->Clone();
-  TCanvas *c10 =  plot4flowfit(dphi,allTrkYield2527,2.5,2.7)->Clone();
-  TCanvas *c11 =  plot4flowfit(dphi,allTrkYield2729,2.7,2.9)->Clone();
-  TCanvas *c12 =  plot4flowfit(dphi,allTrkYield3035,30,35)->Clone();
-  TCanvas *c13 =  plot4flowfit(dphi,allTrkYield3540,35,40)->Clone();
-  TCanvas *c14 =  plot4flowfit(dphi,allTrkYield4045,40,45)->Clone();
+  //plot4flowfit(dphi,allTrkYield0507,0.5,0.7);
+  //plot4flowfit(dphi,allTrkYield0709,0.7,0.9);
+  //plot4flowfit(dphi,allTrkYield0911,0.9,1.1);
+  //plot4flowfit(dphi,allTrkYield1113,1.1,1.3);
+  //plot4flowfit(dphi,allTrkYield1315,1.3,1.5);
+  //plot4flowfit(dphi,allTrkYield1517,1.5,1.7);
+  //plot4flowfit(dphi,allTrkYield1719,1.7,1.9);
+  //plot4flowfit(dphi,allTrkYield1921,1.9,2.1);
+  //plot4flowfit(dphi,allTrkYield2123,2.1,2.3);
+  //plot4flowfit(dphi,allTrkYield2325,2.3,2.5);
+  //plot4flowfit(dphi,allTrkYield2527,2.5,2.7);
+  //plot4flowfit(dphi,allTrkYield2729,2.7,2.9);
+  //plot4flowfit(dphi,allTrkYield3035,3.0,3.5);
+  //plot4flowfit(dphi,allTrkYield3540,3.5,4.0);
+  //plot4flowfit(dphi,allTrkYield4045,4.0,4.5);
 
-  cmain->cd(1 );	c0 ->DrawClonePad();
-  cmain->cd(2 );	c1 ->DrawClonePad();
-  cmain->cd(3 );	c2 ->DrawClonePad();
-  cmain->cd(4 );	c3 ->DrawClonePad();
-  cmain->cd(5 );	c4 ->DrawClonePad();
-  cmain->cd(6 );	c5 ->DrawClonePad();
-  cmain->cd(7 );	c6 ->DrawClonePad();
-  cmain->cd(8 );	c7 ->DrawClonePad();
-  cmain->cd(9 );	c8 ->DrawClonePad();
-  cmain->cd(10);	c9 ->DrawClonePad();
-  cmain->cd(11);	c10->DrawClonePad();
-  cmain->cd(12);  c11->DrawClonePad();
-  cmain->cd(12);  c12->DrawClonePad();
-  cmain->cd(13);  c13->DrawClonePad();
-  cmain->cd(14);	c14->DrawClonePad();
+  //cmain->cd(1 );	c0 ->DrawClonePad();
+  //cmain->cd(2 );	c1 ->DrawClonePad();
+  //cmain->cd(3 );	c2 ->DrawClonePad();
+  //cmain->cd(4 );	c3 ->DrawClonePad();
+  //cmain->cd(5 );	c4 ->DrawClonePad();
+  //cmain->cd(6 );	c5 ->DrawClonePad();
+  //cmain->cd(7 );	c6 ->DrawClonePad();
+  //cmain->cd(8 );	c7 ->DrawClonePad();
+  //cmain->cd(9 );	c8 ->DrawClonePad();
+  //cmain->cd(10);	c9 ->DrawClonePad();
+  //cmain->cd(11);	c10->DrawClonePad();
+  //cmain->cd(12);  c11->DrawClonePad();
+  //cmain->cd(12);  c12->DrawClonePad();
+  //cmain->cd(13);  c13->DrawClonePad();
+  //cmain->cd(14);	c14->DrawClonePad();
 
   //for(int i = 0; i<=11; i++) {	cmain->cd(i+1);	ctemp[i]->DrawClonePad();	}
-  cmain->Update();
-  char savestring[64];
-  sprintf(savestring,"sysstudyflow_dphi%i.jpg",idphi);
-  cmain->SaveAs(savestring);
+ // cmain->Update();
+ // char savestring[64];
+ // sprintf(savestring,"sysstudyflow_dphi%i.jpg",idphi);
+ // cmain->SaveAs(savestring);
 
+  ofstream systFile("wigglErrOUT.txt",fstream::app | fstream::ate);
+  systFile << "WigglErrOUT_dphi" << whichPhi << "percent" << sysPercent <<plusminus << "\t=\t{";
+  for(int n=0;n<=14;n++) {
+    if(n!=0) {  systFile << ",";  }
+    systFile << percentdB[n];
+  }
+  systFile << "};" << endl;
+  //systFile << endl << endl << endl;
+  ipt=0;
 
 }
 
@@ -141,7 +191,8 @@ TCanvas * plot4flowfit(float dphi[], float yieldset[], float ptlo, float pthi)
   cout << "v2compare NEW: " << v2new << endl;
   cout << "v2compare OLD: " << v2old << endl;
   cout << "Represents a : " << deltaPercent << " variance from original values" << endl;
-
+  
+  percentdB[ipt] = deltaPercent;
   ipt++;
   return canvasflowfit;
 
@@ -224,7 +275,7 @@ float resCorr_r8dA(float v2, int sysflag, int centbin)
   //cout << sysflag << "\t" << centbin << endl;
 
 res[0][0] =   0.12821  ; resErr[0][0] =   0.00536457;
-res[1][0] =   0.183482 ; resErr[1][0] =   0.00537042;
+res[1][0] =   0.234077 ; resErr[1][0] =   0.00537042;
 res[2][0] =   0.1425   ; resErr[2][0] =   0.00536553;
 res[3][0] =   0.0169146; resErr[3][0] =   0.00536335;
 res[4][0] =   0.0990726; resErr[4][0] =   0.00535798;
@@ -295,4 +346,18 @@ void setBaseV2() {
   v2allt[12] = 0.035877;    v2allterr[12] = 0.00307623;
   v2allt[13] = 0.0386827;   v2allterr[13] = 0.00301108;
   v2allt[14] = 0.0331255;   v2allterr[14] = 0.0111428;
+}
+
+TRandom *r2 = new TRandom2();
+
+float randomErr(float percent, string plusminus) {
+  if(upordown == "plus")return 1+(r2->Rndm());
+  if(upordown == "minus")return 1-(r2->Rndm());
+}
+
+float anaWiggles(float yieldval, float sysPercent, string plusminus ="plus", int whichPhi, int niterations) {
+  TH1F * yield
+  for(int n=0; n<=niterations; n++) {
+
+  }
 }
